@@ -96,8 +96,12 @@ You can explore and choose any you like, but if you cannot decide, I suggest usi
 
 All team members agree to the [Name of chosen Git Workflow] workflow, and the following conventions (e.g., master branch protection, at least X reviews before a pull request, at least N days before the deadline etc...):
 
-1. Workflow 1
-2. Workflow 2
-3. Workflow 3
-4. Workflow 4
-5. Workflow 5
+* Git Feature Branch Workflow
+    * We will create new branches off of main for different features of the app (layout components, data pipeline, architecture, etc)
+    * We will make commits frequently with commit messages onto these branches describing the contents of our work.
+    * When we reach reasonable sized checkpoints of "ready" work, we will create pull requests.
+    * We will review each other's pull requests, provide feedback, or pull in the request if approved as needed.
+
+* The `main` branch should be clean, predictable, and functional code. 
+    * Pull-requests should not be approved if code harms functionality of the `main` branch.
+    * Unless minimal or for a good reason, changes should not be made directly to the `main` branch.

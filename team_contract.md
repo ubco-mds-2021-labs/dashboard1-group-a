@@ -55,7 +55,6 @@ All team members agree to following the code of conduct, and below are five conc
 4. Step 4. Meet and talk to the TA
 5. Step 5. Talk to the professor
 
-*N.B. Please do not hesitate to expand beyond 5 steps if needed.*
 
 ## Conflict Management
 
@@ -63,17 +62,17 @@ Despite our best intentions, conflict may invariably arise within teammates.
 Discuss amongst your team some conflict mitigation strategies (feel free to search online if needed) and come up with 5 strategies all members of the team agree to follow in the event there is a conflict within the group.
 You may also include things you will NOT do in the event a conflict arises.
 
-1. Strategy 1. 
-2. Strategy 2.
-3. Strategy 3.
-4. Strategy 4.
-5. Strategy 5.
+1. Strategy 1. Talk to your teammate and try to solve the conflict peacefully. 
+2. Strategy 2. Follow the conduct regulation(talk to the person,TA and professor)
+3. Strategy 3. Control your own feelings and be in a peaceful mind when meeting the conflicts. 
+4. Strategy 4. Be respectful to others and don't hurt others feelings.  
+5. Strategy 5. Don't ignore the issues
 
 ## Deadlines
 
 All team members agree to the following conventions around course deadlines:
 
-1. Convention 1
+1. Convention 1 
 2. Convention 2
 3. Convention 3
 

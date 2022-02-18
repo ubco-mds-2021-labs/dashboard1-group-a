@@ -6,10 +6,10 @@ This is a contract between the team members of group A for the project that will
 
 | Name     | GitHub Handle                          |
 |----------|----------------------------------------|
-| Person 1 | [@DishaDH123](https://github.com/DishaDH123) |
-| Person 2 | [@gavingro](https://github.com/gavingro) |
-| Person 3 | [@klphipps](https://github.com/klphipps) |
-| Person 4 | [@ysun822](https://github.com/ysun822) |
+| Disha DH | [@DishaDH123](https://github.com/DishaDH123) |
+| Gavin Grochowski  | [@gavingro](https://github.com/gavingro) |
+| Kristy Phipps | [@klphipps](https://github.com/klphipps) |
+| Yilin Sun | [@ysun822](https://github.com/ysun822) |
 
 ## Participation
 

@@ -78,14 +78,7 @@ All team members agree to the following conventions around course deadlines:
 
 ## Git Workflow
 
-There are many git workflows possible when working on a team project with many moving parts.
-I suggest you discuss in your group some possible Git workflows.
-[Here is a brief primer on some common options](https://www.atlassian.com/git/tutorials/comparing-workflows).
-I suggest reading them, understanding them, and then selecting one.
-You can explore and choose any you like, but if you cannot decide, I suggest using the "Feature Branch Workflow".
-
-
-All team members agree to the [Name of chosen Git Workflow] workflow, and the following conventions (e.g., master branch protection, at least X reviews before a pull request, at least N days before the deadline etc...):
+All team members agree to the Feature Branching] workflow, and the following conventions (e.g., master branch protection, at least 1 review before a pull request):
 
 * Git Feature Branch Workflow
     * We will create new branches off of main for different features of the app (layout components, data pipeline, architecture, etc)

@@ -1,4 +1,4 @@
-# {Energy Usage Dashboard} (Group A)
+#  Energy Usage Dashboard (Group A)
 
 The dashboard created based on a dataset that was collected to create regression models of appliances energy use in a low energy building. It also includes the temperature and humidity of different rooms in the building. We would like to see if the energy usage has difference in different condition (time, temperature, humidity and so on) and give advice to the engineer to design the low energy building and the customers who want to save energy in their daily life. 
 
@@ -11,11 +11,11 @@ The dashboard created based on a dataset that was collected to create regression
 
 ## Describe your topic/interest in about 150-200 words
 
-{We are interested in how to save energy and whether the energy consumption is effected by the factors such as temperature and humidity. The dashboard would like to show the energy consumption condition and the user can know how to lower their energy consumption by controlling the factors. }
+We are interested in how to save energy and whether the energy consumption is effected by the factors such as temperature and humidity. Also, we are interested in if the consumption of energy has big variance in different hours in a day. The dashboard would like to show the energy consumption condition and become a useful guideline for the user who want to lower their energy consumption by controlling the factors. 
 
 ## About this Dashboard
 
-{You can use this area for any images you want to include}
+The dashboard comparing energy consumption of appliances with temperature and humidity variations. The user can change the date range to see the relation between energy consumption and temperature/humidity. In addition, the user can choose a specific place (Living room, bathroom, etc) to see the plot. Also the dashboard includes the impact of temperature outside on energy consumption and the consumption of energy in different hours. 
 
 <img src ="images/test.png" width="100px">
 

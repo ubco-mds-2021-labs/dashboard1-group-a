@@ -49,11 +49,11 @@ To accomplish this goal, below are five concrete ideas that we all agree to rega
 The code of conduct we have chosen is in the [Code of Conduct](./CODE_OF_CONDUCT.md) document.
 All team members agree to following the code of conduct, and below are five concrete escalation steps that we all agree to follow in the event that the code of conduct is violated by any member of the group (Step 1 is the first thing you will do, and Step 5 is the last thing you will do).
 
-1. Step 1.
-2. Step 2.
-3. Step 3.
-4. Step 4.
-5. Step 5.
+1. Step 1. Handling the violate part and undo it 
+2. Step 2. Talk to the student who violate the code of conduct (one on one)
+3. Step 3. Talk in the group about the violation
+4. Step 4. Meet and talk to the TA
+5. Step 5. Talk to the professor
 
 *N.B. Please do not hesitate to expand beyond 5 steps if needed.*
 
@@ -63,7 +63,7 @@ Despite our best intentions, conflict may invariably arise within teammates.
 Discuss amongst your team some conflict mitigation strategies (feel free to search online if needed) and come up with 5 strategies all members of the team agree to follow in the event there is a conflict within the group.
 You may also include things you will NOT do in the event a conflict arises.
 
-1. Strategy 1
+1. Strategy 1. 
 2. Strategy 2.
 3. Strategy 3.
 4. Strategy 4.

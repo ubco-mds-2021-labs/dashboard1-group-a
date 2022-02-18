@@ -72,13 +72,9 @@ You may also include things you will NOT do in the event a conflict arises.
 
 All team members agree to the following conventions around course deadlines:
 
-1. Convention 1 
-2. Convention 2
-3. Convention 3
-
-...etc...
-
-*N.B. 
+1. Doing our best to not do things in the last minute.
+2. Having realtively even distribution of work load.
+3. Collectively work together and support each other to make sure deadlines are being met.
 
 ## Git Workflow
 

@@ -34,7 +34,7 @@ To accomplish this goal, below are five concrete actions that we all agree to ta
 2. Action 2. If we are falling behind in our individual efforts, that must be communicated to the group ASAP
 3. Action 3. If urgent help required, will slack with "Urgent!" otherwise approx 24 hr turnaround
 4. Action 4. All communications will be respectful (written or in person)
-5. Action 5.
+5. Action 5. All major pull requests will be shared with group on slack
 
 ## Meetings
 
@@ -44,15 +44,15 @@ To accomplish this goal, below are five concrete ideas that we all agree to rega
 1. Idea 1. Will always schedule next group meeting at conclusion of current meeting
 2. Idea 2. Will decide as a group whether in person or virtual is desired for next meeting
 3. Idea 3. We will meet at least weekly during lab time on Wednesdays, more if required
-4. Idea 4. 
-5. Idea 5.
+4. Idea 4. Will try to be efficient with our meeting and keep to the tasks at hand
+5. Idea 5. Will all try to attend meetings, but its okay if there is a scheduling conflict
 
 ## Conduct
 
 The code of conduct we have chosen is in the [Code of Conduct](./CODE_OF_CONDUCT.md) document.
 All team members agree to following the code of conduct, and below are five concrete escalation steps that we all agree to follow in the event that the code of conduct is violated by any member of the group (Step 1 is the first thing you will do, and Step 5 is the last thing you will do).
 
-1. Step 1
+1. Step 1.
 2. Step 2.
 3. Step 3.
 4. Step 4.

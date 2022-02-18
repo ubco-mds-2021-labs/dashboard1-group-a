@@ -20,8 +20,8 @@ The dashboard has 2 tabs. The first tab is about house climate. The user can cho
 
 The second tab is about energy use. It also has the comparison factor dropdown box and the user can choose the timescale and date range. The result plot will show the lighting energy consumption, appliance consumption and total consumption separately and its relation with the factor. Also there is a plot of the factors changing with date on energy consumption in the tab.
 
-<img src ="assets/sketch_tab1.png" width="100px">
-<img src ="assets/sketch_tab2.png" width="100px">
+<img src ="assets/sketch_tab1.png" width="500px">
+<img src ="assets/sketch_tab2.png" width="500px">
 
 
 

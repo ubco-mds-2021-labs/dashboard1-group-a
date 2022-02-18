@@ -1,18 +1,15 @@
 # Team Working Contract
 
-Below is a teamwork contract template adapted from [Carnegie Mellon University](https://www.cmu.edu/teaching/designteach/teach/instructionalstrategies/groupprojects/tools/index.html).
-It is divided into several sections, and it is expected that each group will spend some time generating at least 5 points for each section that **everyone agrees** to. 
-
-If you are not able to agree on these points, it is a sign that your group may become dysfunctional, and you should seek advice from me (the course instructor) ASAP to resolve and mediate the discussion.
+This is a contract between the team members of group A for the project that will be done for Data551 (Data Visualization 2) in University of British Columbia, for the Master in Data Science program.
 
 ## Team Members
 
 | Name     | GitHub Handle                          |
 |----------|----------------------------------------|
-| Person 1 | [@username](https://github.com/firasm) |
-| Person 2 | [@username](https://github.com/firasm) |
-| Person 3 | [@username](https://github.com/firasm) |
-| Person 4 | [@username](https://github.com/firasm) |
+| Person 1 | [@DishaDH123](https://github.com/DishaDH123) |
+| Person 2 | [@gavingro](https://github.com/gavingro) |
+| Person 3 | [@klphipps](https://github.com/klphipps) |
+| Person 4 | [@ysun822](https://github.com/ysun822) |
 
 ## Participation
 

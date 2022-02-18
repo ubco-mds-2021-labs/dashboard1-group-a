@@ -16,21 +16,21 @@ This is a contract between the team members of group A for the project that will
 All team members agree to fully participate in all aspects of the project.
 To accomplish this goal, below are five concrete actions that we all agree to take:
 
-1. Action 1
-2. Action 2.
-3. Action 3.
-4. Action 4.
-5. Action 5.
+1. Action 1. Open, regular communication between all team members 
+2. Action 2. Clear delegation of tasks and workload
+3. Action 3. Everyone agrees to meet as scheduled to and to follow internal deadlines
+4. Action 4. Support and in each others unique skillsets (lead, follow and show as approprite)
+5. Action 5. Each agrees to give to give our best effort
 
 ## Communication
 
 All team members agree to communicate openly and transparently during the project.
 To accomplish this goal, below are five concrete actions that we all agree to take:
 
-1. Action 1
-2. Action 2.
-3. Action 3.
-4. Action 4.
+1. Action 1. Always agree to know when we will be meeting as a group next
+2. Action 2. If we are falling behind in our individual efforts, that must be communicated to the group ASAP
+3. Action 3. If urgent help required, will slack with "Urgent!" otherwise approx 24 hr turnaround
+4. Action 4. All communications will be respectful (written or in person)
 5. Action 5.
 
 ## Meetings
@@ -38,11 +38,10 @@ To accomplish this goal, below are five concrete actions that we all agree to ta
 All team members agree to meet regularly during the project.
 To accomplish this goal, below are five concrete ideas that we all agree to regarding scheduling and frequency of meetings:
 
-
-1. Idea 1
-2. Idea 2.
-3. Idea 3.
-4. Idea 4.
+1. Idea 1. Will always schedule next group meeting at conclusion of current meeting
+2. Idea 2. Will decide as a group whether in person or virtual is desired for next meeting
+3. Idea 3. We will meet at least weekly during lab time on Wednesdays, more if required
+4. Idea 4. 
 5. Idea 5.
 
 ## Conduct

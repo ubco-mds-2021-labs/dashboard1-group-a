@@ -5,7 +5,7 @@ The dashboard created based on a dataset that was collected to create regression
 ## Team Members
 
 - Disha DH: one sentence about you!
-- Gavin Grochowski: one sentence about you!
+- Gavin Grochowski is busy trying to pull the perfect espresso shot.
 - Kristy Phipps loves to dance, cuddle puppies and to learn cool new stuff!
 - Yilin Sun: one sentence about you!
 

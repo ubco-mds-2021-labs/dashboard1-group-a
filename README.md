@@ -4,7 +4,7 @@ The dashboard created based on a dataset of appliances energy use data in a low 
 
 ## Team Members
 
-- Disha DH: one sentence about you!
+- Disha DH loves cooking, solo travelling and bagpacking.
 - Gavin Grochowski is busy trying to pull the perfect espresso shot.
 - Kristy Phipps loves to dance, cuddle puppies and to learn cool new stuff!
 - Yilin Sun likes reading and coding but hate leetcode. 

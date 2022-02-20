@@ -16,9 +16,10 @@ We are interested in which factors make a difference to house temperature and wh
 
 ## About this Dashboard
 
-The dashboard has 2 tabs. The first tab is about house climate. The user can choose the comparison factors from the dropdown box and choose the timescale for the plot. In addition, the user can change the date range using the filter bar. The result plot will show the relation between the factors and the temperature/humidity in the house.
+Currently we have decided that the dashboard will have two tabs. The first tab will contain information about the house climate. We will be using this tab to know the variations in humidity and temperature within the house. The user can compare the conditions between multiple rooms at once. The first dropdown box is used to select the type of room which is frequently and less frequently used rooms. The next component which will be a radio button is used to select two or more types of rooms. We will have 4 different time scales which can be Full (For all the 5 months), Daily, Weekly and Monthly. We will also include a slider which will be used to select the date range. The result plot will show the varying changes of temperature and humidity across the house in the specified time range. 
 
-The second tab is about energy use. It also has the comparison factor dropdown box and the user can choose the timescale and date range. The result plot will show the lighting energy consumption, appliance consumption and total consumption separately and its relation with the factor. Also there is a plot of the factors changing with date on energy consumption in the tab.
+The second tab is about energy use. It also has the comparison factor dropdown box.  The second checkbox is used to choose the level of humidity. The third and the fiurth component is used to choose the timescale and date range. The resulting plot will show the energy consumed by lights and appliances in the house for varying levels of conditions specified and the time range specified. It also shows the total energy consumption separately and its relationship with the factor. Below we will include a plot which shows how the selected factor changes over time within the specified range.
+
 
 <img src ="assets/sketch_tab1.png" width="500px">
 <img src ="assets/sketch_tab2.png" width="500px">

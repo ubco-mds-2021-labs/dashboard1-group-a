@@ -13,7 +13,7 @@ EXAMPLE_DROPDOWN = dcc.Dropdown(
     placeholder="Example Dropdown Select",
 )
 
-# This function needs to be imported into the server.py for the app to see it.
+# This callback function needs to be imported into the server.py for the app to see it.
 @app.callback(Output("example-slider", "value"), Input("example-dropdown", "value"))
 def update_example_slider_from_example_dropdown(dropdown_value):
     return dropdown_value

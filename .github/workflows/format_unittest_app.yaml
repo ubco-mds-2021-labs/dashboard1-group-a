@@ -1,0 +1,28 @@
+name: Format and Test Python Application
+
+on:
+  push:
+    branches: 
+      - '*' 
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9.5
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.9.5"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install black
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Lint with black
+      run: |
+        black .
+    - name: Test with unittest
+      run: |
+        python -m unittest discover tests

@@ -1,4 +1,4 @@
-name: Format and Test Python Application
+name: Format Python Application
 
 on:
   push:
@@ -20,9 +20,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install black
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Lint with black
+    - name: Autoformat with black
       run: |
         black .
-    - name: Test with unittest
-      run: |
-        python -m unittest discover tests

@@ -8,4 +8,3 @@ app = dash.Dash(
     title="Group A Dashboard v0.1",
     meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],
 )
-server = app.server

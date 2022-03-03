@@ -1,7 +1,7 @@
 from dash import dcc
 from dash.dependencies import Input, Output
 
-from ..app import app
+from app import app
 
 EXAMPLE_DROPDOWN = dcc.Dropdown(
     id="example-dropdown",

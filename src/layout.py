@@ -3,6 +3,7 @@ from dash import html
 import dash_bootstrap_components as dbc
 
 from .components.sidebar import SIDEBAR
+from .components.sidebar2 import SIDEBAR2
 from .components.tab1 import TAB1
 from .components.tab2 import TAB2
 

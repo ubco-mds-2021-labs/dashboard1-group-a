@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 from ..app import app
 
 
-def choose_fun(fun=1):
+def choose_fun_tab1(fun=1):
     if fun == 1:
         return room_selector
     if fun == 2:
@@ -29,15 +29,15 @@ TAB1_DROPDOWN = dcc.Dropdown(
 
 room_selector = html.Div(
     [
-        dbc.Label("Include:"),
-        dbc.RadioItems(
+        dbc.Label("Include:",class_name="sub_title"),
+        dbc.Checklist(
             id="room_selector",
             options=[
                 {"label": "Bedroom", "value": "bed"},
                 {"label": "Bathroom", "value": "bath"},
                 {"label": "Kitchen", "value": "kich"}
             ],
-            value="bed",
+
             inline=False,
         ),
     ],
@@ -46,15 +46,15 @@ room_selector = html.Div(
 
 sun_light_selector = html.Div(
     [
-        dbc.Label("Include:"),
-        dbc.RadioItems(
+        dbc.Label("Include:",class_name="sub_title"),
+        dbc.Checklist(
             id="sun_light_selector",
             options=[
                 {"label": "East", "value": "east"},
                 {"label": "West", "value": "west"}
 
             ],
-            value="east",
+
             inline=False,
         ),
     ],
@@ -63,15 +63,15 @@ sun_light_selector = html.Div(
 
 floor_selector = html.Div(
     [
-        dbc.Label("Include:"),
-        dbc.RadioItems(
+        dbc.Label("Include:",class_name="sub_title"),
+        dbc.Checklist(
             id="floor_selector",
             options=[
                 {"label": "Ground", "value": "ground"},
                 {"label": "Second", "value": "second"}
 
             ],
-            value="ground",
+
             inline=False,
         ),
     ],
@@ -80,15 +80,15 @@ floor_selector = html.Div(
 
 day_night_selector = html.Div(
     [
-        dbc.Label("Include:"),
-        dbc.RadioItems(
+        dbc.Label("Include:",class_name="sub_title"),
+        dbc.Checklist(
             id="day_night_selector",
             options=[
                 {"label": "Day", "value": "day"},
                 {"label": "Night", "value": "night"}
 
             ],
-            value="day",
+
             inline=False,
         ),
     ],
@@ -98,7 +98,7 @@ day_night_selector = html.Div(
 
 time_scale= html.Div(
     [
-        dbc.Label("Timescale:"),
+        dbc.Label("Timescale:",class_name="sub_title"),
         dbc.RadioItems(
             id="time_scale",
             options=[
@@ -117,7 +117,7 @@ time_scale= html.Div(
 
 date_slider = html.Div(
     [
-        dbc.Label("Date Range:"),
+        dbc.Label("Date Range:",class_name="sub_title"),
 
         dcc.RangeSlider(
         id='date-range-slider',

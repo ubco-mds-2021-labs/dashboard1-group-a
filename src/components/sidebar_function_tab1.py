@@ -103,7 +103,6 @@ time_scale= html.Div(
             id="time_scale",
             options=[
                 {"label": "Full", "value": "full"},
-                {"label": "Week of the month", "value": "weekly"},
                 {"label": "Day of the week", "value": "daily"},
                 {"label": "Hour of the day", "value": "hourly"}
             ],

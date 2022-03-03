@@ -4,7 +4,7 @@ from dash.testing.composite import DashComposite
 
 def test_dbap001_run_server(dash_duo):
     # Start dash app with the "app" variable from server.py
-    app = import_app("src/server")
+    app = import_app("server")
     dash_duo.start_server(app)
 
     # Ensure that the dash app runs by waiting until the "react-entry-point"

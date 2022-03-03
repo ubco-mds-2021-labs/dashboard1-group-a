@@ -11,7 +11,7 @@ LAYOUT = dbc.Container(
     fluid=True,
     children=dbc.Row(
         children=[
-            SIDEBAR,
+            SIDEBAR2,
             dbc.Col(
                 md=9,
                 children=dbc.Tabs(children=[TAB1, TAB2]),

@@ -103,9 +103,9 @@ time_scale= html.Div(
             id="time_scale",
             options=[
                 {"label": "Full", "value": "full"},
-                {"label": "Weekly", "value": "weekly"},
-                {"label": "Daily", "value": "daily"},
-                {"label": "Hourly", "value": "hourly"}
+                {"label": "Week of the month", "value": "weekly"},
+                {"label": "Day of the week", "value": "daily"},
+                {"label": "Hour of the day", "value": "hourly"}
             ],
             value="full",
             inline=False,
@@ -123,14 +123,9 @@ date_slider = html.Div(
         id='date-range-slider',
         min=0,
         max=10,
-        marks={
-        0: '0%',
-        3: '30%',
-        5: '50%',
-        7: '70%',
-        10: '100%'
-    },
-    value=[3, 7]),
+        marks = None
+    ),
     ],
     className="mb-2",
+
 )

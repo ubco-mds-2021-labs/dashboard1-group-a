@@ -8,9 +8,11 @@ from .data_functions import (
     add_features_for_energy_comparison,
 )
 
+DATA_PATH = "data/energydata_complete.csv"
+
 # Temperature dataframe for Tab 1 Use
 temperature_df_full = (
-    pd.read_csv("energydata_complete.csv")
+    pd.read_csv(DATA_PATH)
     .pipe(drop_and_rename_columns)
     .pipe(add_date_features)
     .pipe(pivot_longer_by_humidity_and_temperature)
@@ -26,7 +28,7 @@ temperature_df_full = (
 
 # Energy dataframe for Tab 2 Use
 energy_df_full = (
-    pd.read_csv("energydata_complete.csv")
+    pd.read_csv(DATA_PATH)
     .pipe(drop_and_rename_columns)
     .pipe(add_date_features)
     .pipe(add_features_for_energy_comparison)

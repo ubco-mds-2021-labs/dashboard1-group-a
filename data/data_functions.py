@@ -169,7 +169,7 @@ def add_location_features(df: pd.DataFrame) -> pd.DataFrame:
         The same dataframe with extra floor and
         room_type features added on.
     """
-    # Get floor through use of a helper function
+    # Define Helper Functions to get Floor, Room Type, and Direction Facing
     def get_floor_from_location(location):
         """
         Helper function to the floor of the house based on a
@@ -193,9 +193,6 @@ def add_location_features(df: pd.DataFrame) -> pd.DataFrame:
             floor = "Outside"
         return floor
 
-    df["floor"] = df["measurement_location"].apply(get_floor_from_location)
-
-    # Get room type through use of a helper function
     def get_room_type_from_location(location):
         """
         Returns the type of the room based on a passed-in measurement location.
@@ -218,7 +215,34 @@ def add_location_features(df: pd.DataFrame) -> pd.DataFrame:
             room_type = "Functional Space"
         return room_type
 
+    def get_direction_from_location(location):
+        """
+        Helper function to turn a passed in room location into which
+        sun direction it faces in the house (east or west).
+        """
+        # as gleaned from https://github.com/LuisM78/Appliances-energy-prediction-data/blob/master/Second%20Floor_lines%20removed.png
+        east_locations = ["living_room", "laundry_room", "northside", "parent_bedroom"]
+        west_locations = [
+            "kitchen",
+            "office",
+            "bathroom",
+            "ironing_room",
+            "teen_bedroom",
+        ]
+        outside_locations = ["outside"]
+
+        if location in west_locations:
+            direction = "West Facing"
+        elif location in east_locations:
+            direction = "East Facing"
+        elif location in outside_locations:
+            direction = "Outside"
+        return direction
+
+    # Apply the helper functions to create new columns
+    df["floor"] = df["measurement_location"].apply(get_floor_from_location)
     df["room_type"] = df["measurement_location"].apply(get_room_type_from_location)
+    df["direction"] = df["measurement_location"].apply(get_direction_from_location)
 
     return df
 

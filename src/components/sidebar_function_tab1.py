@@ -16,7 +16,7 @@ def choose_fun_tab1(fun=1):
 
 
 TAB1_DROPDOWN = dcc.Dropdown(
-    id="tab1-dropdown",
+    id="tab1_dropdown",
     options=[
         {"label": "Room Type", "value":1},
         {"label": "Sun light", "value": 2},

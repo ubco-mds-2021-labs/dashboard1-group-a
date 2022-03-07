@@ -23,10 +23,6 @@ dbc.Row(date_slider),
 ],
 )
 
-<<<<<<< HEAD
-@app.callback(Output("selection_tab1", "children"), [Input("tab1_dropdown", "value")])
-=======
 @app.callback(Output("selection_tab1", "children"), Input("tab1_dropdown", "value"))
->>>>>>> 57f875af7e2e72484c133011db5bad7fe1e3336d
 def output_div(value):
     return choose_fun_tab1(value)

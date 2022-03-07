@@ -14,7 +14,7 @@ def choose_fun_tab2(fun=1):
 
 
 TAB2_DROPDOWN = dcc.Dropdown(
-    id="tab2-dropdown",
+    id="tab2_dropdown",
     options=[
         {"label": "Outside Humidity", "value":1},
         {"label": "Outside Temperature ", "value": 2},
@@ -49,10 +49,10 @@ temperature_selector = html.Div(
         dbc.Checklist(
             id="temperature_selector",
             options=[
-            {"label": "Low Temperature", "value": "low_tem"},
-            {"label": "Mid-low Temperature", "value": "mid_low_tem"},
-            {"label": "Mid-high Temperature", "value": "mid_high_tem"},
-            {"label": "High Temperature", "value": "high_tem"}
+            {"label": "Low Outside Temperature", "value": "low_tem"},
+            {"label": "Mid-low Outside Temperature", "value": "mid_low_tem"},
+            {"label": "Mid-high Outside Temperature", "value": "mid_high_tem"},
+            {"label": "High Outside Temperature", "value": "high_tem"}
 
 
             ],

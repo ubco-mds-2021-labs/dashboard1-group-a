@@ -9,6 +9,7 @@ from .components.tab2 import TAB2
 
 LAYOUT = dbc.Container(
     fluid=True,
+
     children=dbc.Row(
         children=[
             SIDEBAR,

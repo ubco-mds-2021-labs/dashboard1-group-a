@@ -34,8 +34,9 @@ room_selector = html.Div(
             id="room_selector",
             options=[
                 {"label": "Bedroom", "value": "bed"},
-                {"label": "Bathroom", "value": "bath"},
-                {"label": "Kitchen", "value": "kich"}
+                {"label": "Functional Space", "value": "func"},
+                {"label": "Living Area", "value": "living"},
+                {"label": "Outside", "value": "out"}
             ],
 
             inline=False,
@@ -50,9 +51,9 @@ sun_light_selector = html.Div(
         dbc.Checklist(
             id="sun_light_selector",
             options=[
-                {"label": "East", "value": "east"},
-                {"label": "West", "value": "west"}
-
+                {"label": "East Facing", "value": "east"},
+                {"label": "West Facing", "value": "west"},
+                {"label": "Outside", "value": "out"}
             ],
 
             inline=False,
@@ -68,7 +69,8 @@ floor_selector = html.Div(
             id="floor_selector",
             options=[
                 {"label": "Ground", "value": "ground"},
-                {"label": "Second", "value": "second"}
+                {"label": "Second", "value": "second"},
+                {"label": "Outside", "value": "out"}
 
             ],
 
@@ -84,8 +86,10 @@ day_night_selector = html.Div(
         dbc.Checklist(
             id="day_night_selector",
             options=[
-                {"label": "Day", "value": "day"},
-                {"label": "Night", "value": "night"}
+                {"label": "Morning", "value": "morning"},
+                {"label": "Afternoon", "value": "afternoon"},
+                {"label": "Evening", "value": "evening"},
+                {"label": "Night", "value": "night"},
 
             ],
 
@@ -102,8 +106,9 @@ time_scale= html.Div(
         dbc.RadioItems(
             id="time_scale",
             options=[
-            
+
                 {"label": "Full", "value": "full"},
+                {"label": "Month", "value": "month"},
                 {"label": "Day of the week", "value": "daily"},
                 {"label": "Hour of the day", "value": "hourly"}
             ],

@@ -67,6 +67,8 @@ def add_date_features(df: pd.DataFrame) -> pd.DataFrame:
     """
     df["date"] = pd.to_datetime(df["date"])
     df["day_of_week"] = df["date"].dt.day_name()
+    df["hour_of_day"] = df["date"].dt.hour
+    df["month"] = df["date"].dt.month_name()
     df["workday"] = df["day_of_week"].apply(
         lambda day: "Weekend" if day in ["Saturday", "Sunday"] else "Weekday"
     )
@@ -94,7 +96,6 @@ def add_date_features(df: pd.DataFrame) -> pd.DataFrame:
 
     df["time_of_day"] = df["date"].dt.hour.apply(get_time_of_day_from_hour)
 
-    df = df.set_index("date")
     return df
 
 

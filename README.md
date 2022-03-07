@@ -1,4 +1,6 @@
-#  Energy Usage Dashboard (Group A)
+#  [Energy Usage Dashboard](https://dashboard1-group-a-python.herokuapp.com) (Group A)
+
+Deployed onto Heroku at https://dashboard1-group-a-python.herokuapp.com.
 
 The dashboard created based on a dataset of appliances energy use data in a low energy building. The dashboard will allow users to explore different aspects of the data, like how external factors like temperature, humidity and windspeed contribute to energy consumption. Other factors such as time of day (morning, afternoon, evening) and day of week (weekday,weekend) and sunlight(east/west) can also be explored by users.  We would like to figure out the house climate and energy use in different time period and if there is a relation between the energy consumptions and the factors. 
 

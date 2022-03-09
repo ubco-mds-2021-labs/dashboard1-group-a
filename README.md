@@ -51,7 +51,8 @@ Our dashboard contains two separate tabs for seeing the house climate conditions
 
 The second tab is about energy use. It also has the comparison factor dropdown box.  The second checkbox is used to choose the level of humidity. The third and the fiurth component is used to choose the timescale and date range. The resulting plot will show the energy consumed by lights and appliances in the house for varying levels of conditions specified and the time range specified. It also shows the total energy consumption separately and its relationship with the factor. Below we will include a plot which shows how the selected factor changes over time within the specified range.
 
-These are the initial sketches of our dashboard. This is what we are working towards, but recognize there will likely be some changes along the way. Stay tuned!
+These are the initial sketches of our dashboard. This is what we are working towards, but recognize there will likely be some changes along the way. Stay tuned!  
+
 <img src ="assets/sketch_tab1.png" width="500px">
 <img src ="assets/sketch_tab2.png" width="500px">
 

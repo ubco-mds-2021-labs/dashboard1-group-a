@@ -8,13 +8,14 @@ from .components.tab2 import TAB2
 
 LAYOUT = dbc.Container(
     fluid=True,
-
     children=dbc.Row(
         children=[
             SIDEBAR,
             dbc.Col(
                 md=9,
-                children=dbc.Tabs(children=[TAB1, TAB2],id="tab_selection"),
+                children=dbc.Tabs(
+                    children=[TAB1, TAB2], id="tab_selection", active_tab="tab-0"
+                ),
             ),
         ]
     ),

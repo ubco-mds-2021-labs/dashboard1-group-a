@@ -7,7 +7,7 @@ Finding the patterns in the energy usage of a house based on weather conditions!
  
 See how the changes are so drastic? Who would have thought?
 
-You can just click on these quick links to navigate to the respective parts:
+### Feel free to scroll down or jump straight to one of the below
 
 - [Dashboard deployed on heroku](#access-our-dashboard-here-(Heroku))
 - [Contributors](#who-are-the-cool-people-involved)

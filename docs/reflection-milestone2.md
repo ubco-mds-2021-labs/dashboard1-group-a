@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 *For milestone 2, we have created the framework and base components of our dashboard to examine factors impacting energy and temperature of a European house through the year.*
 
 # Features Implemented

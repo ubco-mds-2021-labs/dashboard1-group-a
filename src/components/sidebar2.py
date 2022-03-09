@@ -3,8 +3,7 @@ from dash import dcc
 from dash import html,Input, Output
 import dash_bootstrap_components as dbc
 from ..app import app
-from .sidebar_function_tab1 import time_scale,date_slider
-from .sidebar_function_tab2 import TAB2_DROPDOWN,tab2_selector
+from .sidebar_function_tab2 import TAB2_DROPDOWN,tab2_selector,time_scale_2,date_slider_2
 from data.data import energy_df_full
 
 SIDEBAR2 = [dbc.Row("Energy Dashboard",class_name="title",style={"font-size":"30px","padding-left": "10px","padding-top": "10px"}),
@@ -18,9 +17,9 @@ dbc.Row(TAB2_DROPDOWN),
 html.Br(),
 dbc.Row(tab2_selector),
 html.Br(),
-dbc.Row(time_scale),
+dbc.Row(time_scale_2),
 html.Br(),
-dbc.Row(date_slider),
+dbc.Row(date_slider_2),
 ]
 
 

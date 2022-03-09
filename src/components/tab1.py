@@ -72,6 +72,7 @@ plot2 = html.Iframe(
 
 
 TAB1 = dbc.Tab(
+    tab_id = "tab-0",
     label="House Climate",
     children=[
         "The average of temperature of the selected rooms is plotted with the selected time range",

@@ -38,6 +38,7 @@ The second tab is about energy use. It also has the comparison factor dropdown b
 <img src ="assets/sketch_tab2.png" width="500px">
 
 
+<img src ="assets/ezgif-1-9720e4a1fc.gif" width="500px">
 
 ## Describe your dataset in about 150-200 words
 

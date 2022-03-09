@@ -12,6 +12,7 @@ TAB2_DROPDOWN = dcc.Dropdown(
         {"label": "Outside Temperature ", "value": 2},
         {"label": "Windspeed", "value": 3},
     ],
+    value = 1,
     style={'color':'blue'},
 
 )
@@ -27,7 +28,7 @@ tab2_selector = html.Div(
                 {"label": "Mid-high Humidity", "value": "Mid-High Outside Humidity"},
                 {"label": "High Humidity", "value": "High Outside Humidity"}
             ],
-            
+            value=['Low Outside Humidity'],
 
             inline=False,
         ),

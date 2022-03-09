@@ -4,14 +4,12 @@ import dash_bootstrap_components as dbc
 import altair as alt
 import pandas as pd
 
-# from data.data import energy_df_full
+from data.data import energy_df_full
 from ..app import app
 
 alt.data_transformers.enable("data_server")
 alt.data_transformers.disable_max_rows()
 
-# Get df
-energy_df_full = pd.read_csv("data/energy_df_full.csv").astype({"date": "datetime64"})
 
 # Plots
 def energy_plot():

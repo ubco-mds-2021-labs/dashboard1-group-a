@@ -27,7 +27,7 @@ tab2_selector = html.Div(
                 {"label": "Mid-high Humidity", "value": "Mid-High Outside Humidity"},
                 {"label": "High Humidity", "value": "High Outside Humidity"}
             ],
-            value=['Functional Space'],
+            
 
             inline=False,
         ),

@@ -10,7 +10,7 @@ SIDEBAR = dbc.Col(id="sidebar",md=3,class_name="bar",style={'backgroundColor':'g
 
 @app.callback(Output("sidebar", "children"), Input("tab_selection", "active_tab"))
 def output_div(value):
-
+    
     if value == "tab-0":
         return SIDEBAR1
     if value == "tab-1":

@@ -7,7 +7,6 @@ from data.data import energy_df_full
 import altair as alt
 from ..app import app
 
-alt.data_transformers.enable('data_server')
 alt.data_transformers.disable_max_rows()
 
 #Plots

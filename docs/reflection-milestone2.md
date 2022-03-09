@@ -25,5 +25,5 @@ Our dashboard is spread across a sidebar and 2 tabs of content.
 
 * App styling and formatting not yet tidied and formalized. Appearance is still a rough draft, not a final product.
 * Tab 2 Visualizations not yet linked dynamically to sidebar selections with callbacks.
-* Tab 2 may 
+* Tab 2 may end up adding another visualization in our final dashboard to compare dropdown items.
 * "Date Range" selection not yet implemented in sidebar to filter data -- we removed it from this version.

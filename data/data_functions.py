@@ -3,6 +3,27 @@ import pandas as pd
 ##### GENERAL WRANGLING #####
 
 
+def resample_df(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Downsamples the dataframe to one-row-per-hour by averaging
+    all numerical columns.
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        Our raw energydata_complete data BEFORE
+        other transformations are applied.
+
+    Returns
+    -------
+    pd.DataFrame
+        The downsampled dataframe.
+    """
+    df["date"] = pd.to_datetime(df["date"])
+    df = df.resample("H", on="date").mean().reset_index()
+    return df
+
+
 def drop_and_rename_columns(df: pd.DataFrame) -> pd.DataFrame:
     """
     Drops irrelevent random columns and renames remaining columns
@@ -65,7 +86,6 @@ def add_date_features(df: pd.DataFrame) -> pd.DataFrame:
     pd.DataFrame
         The dataframe with a datetime index and several new columns
     """
-    df["date"] = pd.to_datetime(df["date"])
     df["day_of_week"] = df["date"].dt.day_name()
     df["hour_of_day"] = df["date"].dt.hour
     df["month"] = df["date"].dt.month_name()

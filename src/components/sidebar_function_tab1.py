@@ -4,15 +4,16 @@ import dash_bootstrap_components as dbc
 from ..app import app
 
 
-def choose_fun_tab1(fun=1):
-    if fun == 1:
-        return room_selector
-    if fun == 2:
-        return sun_light_selector
-    if fun == 3:
-        return floor_selector
-    if fun == 4:
-        return day_night_selector
+# # REPLACED WITH DYNAMIC SELECTOR OPTIONS
+# def choose_fun_tab1(fun=1):
+#     if fun == 1:
+#         return room_selector
+#     if fun == 2:
+#         return sun_light_selector
+#     if fun == 3:
+#         return floor_selector
+#     if fun == 4:
+#         return day_night_selector
 
 
 TAB1_DROPDOWN = dcc.Dropdown(
@@ -28,16 +29,16 @@ TAB1_DROPDOWN = dcc.Dropdown(
 
 )
 
-room_selector = html.Div(
+tab1_selector = html.Div(
     [
         dbc.Label("Include:",class_name="sub_title"),
         dbc.Checklist(
-            id="room_selector",
+            id="selection_tab1",
             options=[
-                {"label": "Bedroom", "value": "bed"},
-                {"label": "Functional Space", "value": "func"},
-                {"label": "Living Area", "value": "living"},
-                {"label": "Outside", "value": "out"}
+                {"label": "Bedroom", "value": "Bedroom"},
+                {"label": "Functional Space", "value": "Functional Space"},
+                {"label": "Living Area", "value": "Living Area"},
+                {"label": "Outside", "value": "Outside"}
             ],
             value=['Functional Space'],
 
@@ -47,59 +48,81 @@ room_selector = html.Div(
     className="mb-2",
 )
 
-sun_light_selector = html.Div(
-    [
-        dbc.Label("Include:",class_name="sub_title"),
-        dbc.Checklist(
-            id="sun_light_selector",
-            options=[
-                {"label": "East Facing", "value": "east"},
-                {"label": "West Facing", "value": "west"},
-                {"label": "Outside", "value": "out"}
-            ],
 
-            inline=False,
-        ),
-    ],
-    className="mb-2",
-)
+# # INDIVIDUAL COMPONENTS REPLACED WITH DYNAMICLY GENERATED
+# # SELECTOR OPTIONS 
+# room_selector = html.Div(
+#     [
+#         dbc.Label("Include:",class_name="sub_title"),
+#         dbc.Checklist(
+#             id="room_selector",
+#             options=[
+#                 {"label": "Bedroom", "value": "Bedroom"},
+#                 {"label": "Functional Space", "value": "Functional Space"},
+#                 {"label": "Living Area", "value": "Living Area"},
+#                 {"label": "Outside", "value": "Outside"}
+#             ],
+#             value=['Functional Space'],
 
-floor_selector = html.Div(
-    [
-        dbc.Label("Include:",class_name="sub_title"),
-        dbc.Checklist(
-            id="floor_selector",
-            options=[
-                {"label": "Ground", "value": "ground"},
-                {"label": "Second", "value": "second"},
-                {"label": "Outside", "value": "out"}
+#             inline=False,
+#         ),
+#     ],
+#     className="mb-2",
+# )
 
-            ],
+# sun_light_selector = html.Div(
+#     [
+#         dbc.Label("Include:",class_name="sub_title"),
+#         dbc.Checklist(
+#             id="sun_light_selector",
+#             options=[
+#                 {"label": "East Facing", "value": "East Facing"},
+#                 {"label": "West Facing", "value": "West Facing"},
+#                 {"label": "Outside", "value": "Outside"}
+#             ],
 
-            inline=False,
-        ),
-    ],
-    className="mb-2",
-)
+#             inline=False,
+#         ),
+#     ],
+#     className="mb-2",
+# )
 
-day_night_selector = html.Div(
-    [
-        dbc.Label("Include:",class_name="sub_title"),
-        dbc.Checklist(
-            id="day_night_selector",
-            options=[
-                {"label": "Morning", "value": "morning"},
-                {"label": "Afternoon", "value": "afternoon"},
-                {"label": "Evening", "value": "evening"},
-                {"label": "Night", "value": "night"},
+# floor_selector = html.Div(
+#     [
+#         dbc.Label("Include:",class_name="sub_title"),
+#         dbc.Checklist(
+#             id="floor_selector",
+#             options=[
+#                 {"label": "Ground", "value": "Ground"},
+#                 {"label": "Second", "value": "Second"},
+#                 {"label": "Outside", "value": "Outside"}
 
-            ],
+#             ],
 
-            inline=False,
-        ),
-    ],
-    className="mb-2",
-)
+#             inline=False,
+#         ),
+#     ],
+#     className="mb-2",
+# )
+
+# day_night_selector = html.Div(
+#     [
+#         dbc.Label("Include:",class_name="sub_title"),
+#         dbc.Checklist(
+#             id="day_night_selector",
+#             options=[
+#                 {"label": "Morning", "value": "Morning"},
+#                 {"label": "Afternoon", "value": "Afternoon"},
+#                 {"label": "Evening", "value": "Evening"},
+#                 {"label": "Night", "value": "Night"},
+
+#             ],
+
+#             inline=False,
+#         ),
+#     ],
+#     className="mb-2",
+# )
 
 
 time_scale= html.Div(

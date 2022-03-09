@@ -9,12 +9,12 @@ See how the changes are so drastic? Who would have thought?
 
 You can just click on these quick links to navigate to the respective parts:
 
-[Dashboard deployed on heroku](#Access-our-dashboard-here-(Heroku))
-[Contributors](#Who-are-the-cool-people-involved?)
-[What held our interest](#What-held-our-interest-in-doing-this-project?)
-[Working of the dashboard](#How-does-our-dashboard-work?)
-[Dataset description](#Description-of-our-dataset)
-[Acknowledgements](#Acknowledgements-and-references)
+- [Dashboard deployed on heroku](#access-our-dashboard-here-(Heroku))
+- [Contributors](#who-are-the-cool-people-involved)
+- [What held our interest](#What-held-our-interest-in-doing-this-project)
+- [Working of the dashboard](#How-does-our-dashboard-work)
+- [Dataset description](#Description-of-our-dataset)
+- [Acknowledgements](#Acknowledgements-and-references)
  
 
 ## Access our dashboard here (Heroku)

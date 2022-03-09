@@ -23,6 +23,7 @@ TAB1_DROPDOWN = dcc.Dropdown(
         {"label": "Floor of House", "value": 3},
         {"label": "Daytime/Nightime", "value": 4},
     ],
+    value=1,
     style={'color':'blue'},
 
 )
@@ -38,6 +39,7 @@ room_selector = html.Div(
                 {"label": "Living Area", "value": "living"},
                 {"label": "Outside", "value": "out"}
             ],
+            value=['Functional Space'],
 
             inline=False,
         ),

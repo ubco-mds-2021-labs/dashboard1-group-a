@@ -41,8 +41,5 @@ plot1b = html.Iframe(srcDoc=weather_plot(),style={'border-width':'0','width':'10
 TAB2 = dbc.Tab(label="Energy Usage", children=["Tab 2 Content",
                                                 plot1a, plot1b])
 
-plot1a
-plot1b
-
 if __name__ == '__main__':
     app.run_server(debug=True)

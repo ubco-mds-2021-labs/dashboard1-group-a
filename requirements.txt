@@ -1,3 +1,5 @@
+altair ==4.2.0
+altair-data-server ==0.4.1
 selenium == 4.1.0
 Brotli==1.0.9
 beautifulsoup4==4.10.0

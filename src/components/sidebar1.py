@@ -23,10 +23,6 @@ html.Br(),
 dbc.Row(date_slider),
 ]
 
-# # REPLACED WITH DYNAMICALLY GENERATED SELECTION OPTIONS
-# @app.callback(Output("selection_tab1", "children"), Input("tab1_dropdown", "value"))
-# def output_div(value):
-#     return choose_fun_tab1(value)
 
 @app.callback(
     Output('selection_tab1', 'options'),

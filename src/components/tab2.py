@@ -57,28 +57,16 @@ plot1b = html.Iframe(
 )
 
 
-weather_list = [
-    "temperature_outside",
-    "dewpoint",
-    "humidity_outside",
-    "pressure",
-    "windspeed",
-    "visibility",
-]
-choice = dcc.Dropdown(
-    id="chart_dropdown",
-    value="temperature_outside",
-    options=[{"label": i, "value": i} for i in weather_list],
-)
+
 
 
 TAB2 = dbc.Tab(
     label="Energy Usage",
     tab_id="tab-1",
     children=[
-        "Tab 2 Content",
+        "Total Energy Usage over Time",
         plot1a,
-        choice,
+        "Climate Factor over Time",
         plot1b,
     ],
 )

@@ -64,8 +64,9 @@ TAB2 = dbc.Tab(
     label="Energy Usage",
     tab_id="tab-1",
     children=[
-        "Tab 2 Content",
+        "Total Energy Usage over Time",
         plot1a,
+        "Climate Factor over Time",
         plot1b,
     ],
 )

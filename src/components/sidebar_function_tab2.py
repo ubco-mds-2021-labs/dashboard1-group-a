@@ -2,7 +2,7 @@ from dash import dcc
 from dash import Input, Output,html
 import dash_bootstrap_components as dbc
 from ..app import app
-
+from datetime import date
 
 
 TAB2_DROPDOWN = dcc.Dropdown(
@@ -36,37 +36,29 @@ tab2_selector = html.Div(
     className="mb-2",
 )
 
-time_scale_2= html.Div(
-    [
-        dbc.Label("Timescale:",class_name="sub_title"),
-        dbc.RadioItems(
-            id="time_scale_2",
-            options=[
 
-                {"label": "Full", "value": "full"},
-                {"label": "Month", "value": "month"},
-                {"label": "Day of the week", "value": "daily"},
-                {"label": "Hour of the day", "value": "hourly"}
-            ],
-            value="full",
-            inline=False,
-        ),
-    ],
-    className="mb-2",
+date_picker = dcc.DatePickerRange(
+    id="my-date-picker-range",
+    min_date_allowed=date(2016, 1, 11),
+    max_date_allowed=date(2016, 5, 27),
+    initial_visible_month=date(2016, 1, 11),
+    start_date=date(2016, 1, 11),
+    end_date=date(2016, 5, 27),
 )
 
 
-date_slider_2 = html.Div(
-    [
-        dbc.Label("Date Range:",class_name="sub_title"),
 
-        dcc.RangeSlider(
-        id='date-range-slider_2',
-        min=0,
-        max=10,
-        marks = None
-    ),
-    ],
-    className="mb-2",
-
+weather_list = [
+    "temperature_outside",
+    "dewpoint",
+    "humidity_outside",
+    "pressure",
+    "windspeed",
+    "visibility",
+]
+choice = dcc.Dropdown(
+    id="chart_dropdown",
+    value="temperature_outside",
+    style={'color':'blue'},
+    options=[{"label": i, "value": i} for i in weather_list],
 )

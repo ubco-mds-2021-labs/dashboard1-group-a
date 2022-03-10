@@ -57,19 +57,7 @@ plot1b = html.Iframe(
 )
 
 
-weather_list = [
-    "temperature_outside",
-    "dewpoint",
-    "humidity_outside",
-    "pressure",
-    "windspeed",
-    "visibility",
-]
-choice = dcc.Dropdown(
-    id="chart_dropdown",
-    value="temperature_outside",
-    options=[{"label": i, "value": i} for i in weather_list],
-)
+
 
 
 TAB2 = dbc.Tab(
@@ -78,7 +66,6 @@ TAB2 = dbc.Tab(
     children=[
         "Tab 2 Content",
         plot1a,
-        choice,
         plot1b,
     ],
 )

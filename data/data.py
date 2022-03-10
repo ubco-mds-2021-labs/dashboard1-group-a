@@ -6,7 +6,7 @@ ENERGY_DATA_PATH = "data/energy_df_full.csv"
 # Temperature dataframe for Tab 1 Use
 temperature_df_full = pd.read_csv("data/temperature_df_full.csv").astype(
     {"date": "datetime64"}
-).iloc[0:5000]
+)
 
 # Energy dataframe for Tab 2 Use
-energy_df_full = pd.read_csv("data/energy_df_full.csv").astype({"date": "datetime64"}).iloc[0:5000]
+energy_df_full = pd.read_csv("data/energy_df_full.csv").astype({"date": "datetime64"})

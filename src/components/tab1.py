@@ -61,18 +61,18 @@ def plot2_altair(temperature_df_full, xcol="day_of_week", cat_compare="room_type
 
 plot1 = html.Iframe(
     id="plot1",
-    srcDoc=plot1_altair(temperature_df_full, xcol="day_of_week"),
+    srcDoc=plot1_altair(temperature_df_full, xcol="date"),
     style={"width": "100%", "height": "400px"},
 )
 plot2 = html.Iframe(
     id="plot2",
-    srcDoc=plot2_altair(temperature_df_full, xcol="day_of_week"),
+    srcDoc=plot2_altair(temperature_df_full, xcol="date"),
     style={"width": "100%", "height": "400px"},
 )
 
 
 TAB1 = dbc.Tab(
-    tab_id = "tab-0",
+    tab_id="tab-0",
     label="House Climate",
     children=[
         "The average of temperature of the selected rooms is plotted with the selected time range",

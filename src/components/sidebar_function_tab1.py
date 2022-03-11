@@ -31,8 +31,16 @@ tab1_selector = html.Div(
                 {"label": "Living Area", "value": "Living Area"},
                 {"label": "Outside", "value": "Outside"}
             ],
-            value=['Functional Space'],
-
+             # Include ALL options to set default graph to full lines.
+             # This also matches the initial page load for our data visualizations,
+             # as we only filter out options on callback update (which takes
+             # a second or two once the page loads).
+             value=[
+                 "Functional Space", "Living Area", "Outside", "Bedroom",
+                 "West Facing", "East Facing", "Outside",
+                 "Ground Floor", "Second Floor",
+                 "Afternoon", "Evening", "Night", "Morning"
+                 ],
             inline=False,
         ),
     ],

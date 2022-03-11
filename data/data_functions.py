@@ -268,6 +268,41 @@ def add_location_features(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def get_temperature_df_features(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Returns only those features we use in our tab 1 temperature tab
+    from the passed in data frame.
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        Our cleaned and wrangled df.
+
+    Returns
+    -------
+    pd.DataFrame
+        The subset of specific columns from our
+        passed in df.
+    """
+    df = df[
+        [
+            "date",
+            "day_of_week",
+            "hour_of_day",
+            "month",
+            "measurement_location",
+            "temperature",
+            "humidity",
+            "workday",
+            "time_of_day",
+            "floor",
+            "room_type",
+            "direction",
+        ]
+    ]
+    return df
+
+
 ##### WRANGLING FOR ENERGY DF #####
 
 
@@ -304,6 +339,28 @@ def add_features_for_energy_comparison(df: pd.DataFrame) -> pd.DataFrame:
         ],
     )
 
+    df["visibility_status"] = pd.cut(
+        df["visibility"],
+        bins=4,
+        labels=[
+            "Low Visibility",
+            "Mid-Low Visibility",
+            "Mid-High Visibility",
+            "High Visibility",
+        ],
+    )
+
+    df["dewpoint_status"] = pd.cut(
+        df["dewpoint"],
+        bins=4,
+        labels=[
+            "Low Dewpoint",
+            "Mid-Low Dewpoint",
+            "Mid-High Dewpoint",
+            "High Dewpoint",
+        ],
+    )
+
     df["outside_temperature_status"] = pd.cut(
         df["temperature_outside"],
         bins=4,
@@ -325,4 +382,39 @@ def add_features_for_energy_comparison(df: pd.DataFrame) -> pd.DataFrame:
             "High Outside Humidity",
         ],
     )
+    return df
+
+
+def get_energy_df_features(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Returns only those features we use in our tab 2 energy tab
+    from the passed in data frame.
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        Our cleaned and wrangled df.
+
+    Returns
+    -------
+    pd.DataFrame
+        The subset of specific columns from our
+        passed in df.
+    """
+    df = df[
+        [
+            "date",
+            "day_of_week",
+            "hour_of_day",
+            "month",
+            "energy_appliances",
+            "energy_lights",
+            "temperature_outside",
+            "humidity_outside",
+            "dewpoint",
+            "pressure",
+            "windspeed",
+            "visibility",
+        ]
+    ]
     return df

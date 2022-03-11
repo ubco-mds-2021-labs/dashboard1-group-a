@@ -10,8 +10,14 @@ alt.data_transformers.disable_max_rows()
 
 def plot1_altair(temperature_df_full, xcol="day_of_week", cat_compare="room_type"):
 
+    # Filter data based on needed columns to reduce memory.
+    necessary_cols = ["temperature"]
+    necessary_cols.append(xcol)
+    necessary_cols.append(cat_compare)
+    temperature_df_filtered = temperature_df_full[necessary_cols]
+
     chart1 = (
-        alt.Chart(temperature_df_full)
+        alt.Chart(temperature_df_filtered)
         .mark_line()
         .encode(
             x=alt.X(
@@ -35,8 +41,15 @@ def plot1_altair(temperature_df_full, xcol="day_of_week", cat_compare="room_type
 
 
 def plot2_altair(temperature_df_full, xcol="day_of_week", cat_compare="room_type"):
+
+    # Filter data based on needed columns to reduce memory.
+    necessary_cols = ["humidity"]
+    necessary_cols.append(xcol)
+    necessary_cols.append(cat_compare)
+    temperature_df_filtered = temperature_df_full[necessary_cols]
+
     chart2 = (
-        alt.Chart(temperature_df_full)
+        alt.Chart(temperature_df_filtered)
         .mark_line()
         .encode(
             x=alt.X(
@@ -72,7 +85,7 @@ plot2 = html.Iframe(
 
 
 TAB1 = dbc.Tab(
-    tab_id = "tab-0",
+    tab_id="tab-0",
     label="House Climate",
     children=[
         "The average of temperature of the selected rooms is plotted with the selected time range",

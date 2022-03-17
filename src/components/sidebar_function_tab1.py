@@ -2,7 +2,7 @@ from dash import dcc
 from dash import Input, Output,html
 import dash_bootstrap_components as dbc
 from ..app import app
-
+from datetime import date
 
 
 
@@ -71,17 +71,11 @@ time_scale= html.Div(
 )
 
 
-date_slider = html.Div(
-    [
-        dbc.Label("Date Range:",class_name="sub_title"),
-
-        dcc.RangeSlider(
-        id='date-range-slider',
-        min=0,
-        max=10,
-        marks = None
-    ),
-    ],
-    className="mb-2",
-
+date_picker_tab1 = dcc.DatePickerRange(
+    id="date_picker_tab1",
+    min_date_allowed=date(2016, 1, 12),
+    max_date_allowed=date(2016, 5, 27),
+    initial_visible_month=date(2016, 1, 12),
+    start_date=date(2016, 1, 12),
+    end_date=date(2016, 5, 27),
 )

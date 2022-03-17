@@ -3,7 +3,7 @@ from dash import dcc
 from dash import html,Input, Output
 import dash_bootstrap_components as dbc
 from ..app import app
-from .sidebar_function_tab1 import TAB1_DROPDOWN,time_scale,date_slider,tab1_selector
+from .sidebar_function_tab1 import TAB1_DROPDOWN,time_scale,date_picker_tab1,tab1_selector
 from data.data import temperature_df_full
 
 
@@ -17,10 +17,11 @@ html.Br(),
 dbc.Row(TAB1_DROPDOWN),
 html.Br(),
 dbc.Row(tab1_selector),
-html.Br(),
+dbc.Row("___________________________________________"),
 dbc.Row(time_scale),
 html.Br(),
-dbc.Row(date_slider),
+dbc.Label("Choose Date Range:",class_name="sub_title"),
+dbc.Row(date_picker_tab1)
 ]
 
 

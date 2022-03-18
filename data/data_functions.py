@@ -439,7 +439,7 @@ def get_energy_df_features(df: pd.DataFrame) -> pd.DataFrame:
             "Energy Appliances": "Energy Use - Appliances (Wh)",
             "Energy Lights": "Energy Use - Lights (Wh)",
             "Temperature Outside": "Temperature Outside (C)",
-            "Humididty Outside": "Humididty Outside (%)",
+            "Humidity Outside": "Humidity Outside (%)",
             "Dewpoint": "Dewpoint (C)",
             "Pressure": "Air Pressure (mm Hg)",
             "Windspeed": "Windspeed (m / s)",

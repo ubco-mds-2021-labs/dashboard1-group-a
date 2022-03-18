@@ -1,4 +1,4 @@
-,date,day_of_week,hour_of_day,month,energy_appliances,energy_lights,temperature_outside,humidity_outside,dewpoint,pressure,windspeed,visibility
+,Date,Day of Week,Hour of Day,Month,Energy Use - Appliances (Wh),Energy Use - Lights (Wh),Temperature Outside (C),Humidity Outside,Dewpoint (C),Air Pressure (mm Hg),Windspeed (m / s),Visibility (km)
 0,2016-01-11 17:00:00,Monday,17,January,55.0,35.0,6.308333333333334,92.0,5.05,733.75,6.166666666666667,53.416666666666664
 1,2016-01-11 18:00:00,Monday,18,January,176.66666666666666,51.666666666666664,5.941666666666666,91.58333333333333,4.658333333333333,734.2666666666665,5.416666666666667,40.0
 2,2016-01-11 19:00:00,Monday,19,January,173.33333333333334,25.0,6.0,89.75,4.391666666666667,734.7916666666666,6.0,40.0

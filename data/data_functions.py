@@ -400,7 +400,7 @@ def add_features_for_energy_comparison(df: pd.DataFrame) -> pd.DataFrame:
 def get_energy_df_features(df: pd.DataFrame) -> pd.DataFrame:
     """
     Returns only those features we use in our tab 2 energy tab
-    from the passed in data frame.
+    from the passed in data frame, and tidies up their column names.
 
     Parameters
     ----------
@@ -411,9 +411,9 @@ def get_energy_df_features(df: pd.DataFrame) -> pd.DataFrame:
     -------
     pd.DataFrame
         The subset of specific columns from our
-        passed in df.
+        passed in df with presentable variable names.
     """
-    df = df[
+    df_selection = df[
         [
             "date",
             "day_of_week",
@@ -429,4 +429,21 @@ def get_energy_df_features(df: pd.DataFrame) -> pd.DataFrame:
             "visibility",
         ]
     ]
-    return df
+    df_selection_renamed = df_selection.rename(
+        columns={
+            column: column.replace("_", " ").title().replace(" Of ", " of ")
+            for column in df_selection.columns
+        }
+    ).rename(
+        columns={
+            "Energy Appliances": "Energy Use - Appliances (Wh)",
+            "Energy Lights": "Energy Use - Lights (Wh)",
+            "Temperature Outside": "Temperature Outside (C)",
+            "Humididty Outside": "Humididty Outside (%)",
+            "Dewpoint": "Dewpoint (C)",
+            "Pressure": "Air Pressure (mm Hg)",
+            "Windspeed": "Windspeed (m / s)",
+            "Visibility": "Visibility (km)",
+        }
+    )
+    return df_selection_renamed

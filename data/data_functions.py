@@ -271,7 +271,7 @@ def add_location_features(df: pd.DataFrame) -> pd.DataFrame:
 def get_temperature_df_features(df: pd.DataFrame) -> pd.DataFrame:
     """
     Returns only those features we use in our tab 1 temperature tab
-    from the passed in data frame.
+    from the passed in data frame, and tidies up their column names.
 
     Parameters
     ----------
@@ -282,9 +282,10 @@ def get_temperature_df_features(df: pd.DataFrame) -> pd.DataFrame:
     -------
     pd.DataFrame
         The subset of specific columns from our
-        passed in df.
+        passed in df, with Capital and Space column
+        names.
     """
-    df = df[
+    df_selection = df[
         [
             "date",
             "day_of_week",
@@ -300,7 +301,18 @@ def get_temperature_df_features(df: pd.DataFrame) -> pd.DataFrame:
             "direction",
         ]
     ]
-    return df
+    df_selection_renamed = df_selection.rename(
+        columns={
+            column: column.replace("_", " ").title().replace(" Of ", " of ")
+            for column in df_selection.columns
+        }
+    ).rename(
+        columns={
+            "Temperature": "Temperature (C)",
+            "Humidity": "Relative Humidity (%)",
+        }
+    )
+    return df_selection_renamed
 
 
 ##### WRANGLING FOR ENERGY DF #####

@@ -30,10 +30,10 @@ dbc.Row(date_picker_tab1)
     Input('tab1_dropdown', 'value'))
 def set_checkbox(tab1_dropdown):
     if tab1_dropdown==1:
-        return [{'label': i, 'value': i} for i in temperature_df_full['room_type'].unique()]
+        return [{'label': i, 'value': i} for i in temperature_df_full['Room Type'].unique()]
     elif tab1_dropdown==2:
-        return [{'label': i, 'value': i} for i in temperature_df_full['direction'].unique()]
+        return [{'label': i, 'value': i} for i in temperature_df_full['Direction'].unique()]
     elif tab1_dropdown==3:
-        return [{'label': i, 'value': i} for i in temperature_df_full['floor'].unique()]
+        return [{'label': i, 'value': i} for i in temperature_df_full['Floor'].unique()]
     elif tab1_dropdown==4:
-        return [{'label': i, 'value': i} for i in temperature_df_full['time_of_day'].unique()]
+        return [{'label': i, 'value': i} for i in temperature_df_full['Time of Day'].unique()]

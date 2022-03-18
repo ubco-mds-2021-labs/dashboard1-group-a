@@ -13,23 +13,30 @@ alt.data_transformers.disable_max_rows()
 # Plots
 def energy_plot():
     # Filtering values
-    necessary_cols = ["date", "energy_appliances", "energy_lights"]
+    necessary_cols = [
+        "Date",
+        "Energy Use - Appliances (Wh)",
+        "Energy Use - Lights (Wh)",
+    ]
     start_date = "2016-01-12"
     end_date = "2016-01-13"
 
     # Apply Filters
     energy_df_filtered = energy_df_full[necessary_cols]
-    mask = (energy_df_filtered["date"] > start_date) & (
-        energy_df_filtered["date"] <= end_date
+    mask = (energy_df_filtered["Date"] > start_date) & (
+        energy_df_filtered["Date"] <= end_date
     )
     energy_df_filtered = energy_df_filtered[mask]
 
     chart1a = (
         alt.Chart(energy_df_filtered)
-        .transform_fold(["energy_appliances", "energy_lights"], as_=["total", "value"])
+        .transform_fold(
+            ["Energy Use - Appliances (Wh)", "Energy Use - Lights (Wh)"],
+            as_=["total", "value"],
+        )
         .mark_bar()
         .encode(
-            alt.X("hours(date):T", axis=alt.Axis(title="Elapsed Time")),
+            alt.X("hours(Date):T", axis=alt.Axis(title="Elapsed Time")),
             alt.Y("value:Q", axis=alt.Axis(title="Energy Usage in wH")),
             color="total:N",
         )
@@ -38,24 +45,24 @@ def energy_plot():
     return chart1a.to_html()
 
 
-def weather_plot(ycol="temperature_outside"):
+def weather_plot(ycol="Temperature Outside (C)"):
     # Filtering values
-    necessary_cols = ["date"]
+    necessary_cols = ["Date"]
     necessary_cols.append(ycol)
     start_date = "2016-01-12"
     end_date = "2016-01-13"
 
     # Apply Filters
     energy_df_filtered = energy_df_full[necessary_cols]
-    mask = (energy_df_filtered["date"] > start_date) & (
-        energy_df_filtered["date"] <= end_date
+    mask = (energy_df_filtered["Date"] > start_date) & (
+        energy_df_filtered["Date"] <= end_date
     )
     energy_df_filtered = energy_df_full[mask]
 
     chart1b = (
         alt.Chart(energy_df_filtered)
         .mark_line()
-        .encode(alt.X("date:T", axis=alt.Axis(title="Elapsed Time")), y=ycol)
+        .encode(alt.X("Date:T", axis=alt.Axis(title="Elapsed Time")), y=ycol)
         .properties(height=200, width=500)
     )
     return chart1b.to_html()
@@ -67,7 +74,7 @@ plot1a = html.Iframe(
 )
 plot1b = html.Iframe(
     id="plot1b",
-    srcDoc=weather_plot(ycol="temperature_outside"),
+    srcDoc=weather_plot(ycol="Temperature Outside (C)"),
     style={"border-width": "0", "width": "100%", "height": "400px"},
 )
 

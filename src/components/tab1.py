@@ -8,10 +8,10 @@ from ..app import app
 alt.data_transformers.disable_max_rows()
 
 
-def plot1_altair(temperature_df_full, xcol="day_of_week", cat_compare="room_type"):
+def plot1_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type"):
 
     # Filter data based on needed columns to reduce memory.
-    necessary_cols = ["temperature"]
+    necessary_cols = ["Temperature (C)"]
     necessary_cols.append(xcol)
     necessary_cols.append(cat_compare)
     temperature_df_filtered = temperature_df_full[necessary_cols]
@@ -32,7 +32,7 @@ def plot1_altair(temperature_df_full, xcol="day_of_week", cat_compare="room_type
                     "Sunday",
                 ],
             ),
-            y="mean(temperature)",
+            y="mean(Temperature (C))",
             color=cat_compare,
         )
         .properties(height=200, width=800)
@@ -40,10 +40,10 @@ def plot1_altair(temperature_df_full, xcol="day_of_week", cat_compare="room_type
     return chart1.to_html()
 
 
-def plot2_altair(temperature_df_full, xcol="day_of_week", cat_compare="room_type"):
+def plot2_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type"):
 
     # Filter data based on needed columns to reduce memory.
-    necessary_cols = ["humidity"]
+    necessary_cols = ["Relative Humidity (%)"]
     necessary_cols.append(xcol)
     necessary_cols.append(cat_compare)
     temperature_df_filtered = temperature_df_full[necessary_cols]
@@ -64,7 +64,7 @@ def plot2_altair(temperature_df_full, xcol="day_of_week", cat_compare="room_type
                     "Sunday",
                 ],
             ),
-            y="mean(humidity)",
+            y="mean(Relative Humidity (%))",
             color=cat_compare,
         )
         .properties(height=200, width=800)
@@ -74,12 +74,12 @@ def plot2_altair(temperature_df_full, xcol="day_of_week", cat_compare="room_type
 
 plot1 = html.Iframe(
     id="plot1",
-    srcDoc=plot1_altair(temperature_df_full, xcol="date"),
+    srcDoc=plot1_altair(temperature_df_full, xcol="Date"),
     style={"width": "100%", "height": "400px"},
 )
 plot2 = html.Iframe(
     id="plot2",
-    srcDoc=plot2_altair(temperature_df_full, xcol="date"),
+    srcDoc=plot2_altair(temperature_df_full, xcol="Date"),
     style={"width": "100%", "height": "400px"},
 )
 
@@ -88,9 +88,9 @@ TAB1 = dbc.Tab(
     tab_id="tab-0",
     label="House Climate",
     children=[
-        "The average of temperature of the selected rooms is plotted with the selected time range",
+        "The average of Temperature of the selected rooms is plotted with the selected time range",
         plot1,
-        "The average of humidity of the selected rooms is plotted with the selected time range",
+        "The average of Relative Humidity of the selected rooms is plotted with the selected time range",
         plot2,
     ],
 )
@@ -105,20 +105,20 @@ TAB1 = dbc.Tab(
 )
 def update_plot(tab1_dropdown, selection_tab1, time_scale):
     if tab1_dropdown == 1:
-        cat_compare = "room_type"
+        cat_compare = "Room Type"
     elif tab1_dropdown == 2:
-        cat_compare = "direction"
+        cat_compare = "Direction"
     elif tab1_dropdown == 3:
-        cat_compare = "floor"
+        cat_compare = "Floor"
     else:
-        cat_compare = "time_of_day"
+        cat_compare = "Time of Day"
     df1 = temperature_df_full[temperature_df_full[cat_compare].isin(selection_tab1)]
     if time_scale == "full":
-        a = "date"
+        a = "Date"
     elif time_scale == "month":
-        a = "month"
+        a = "Month"
     elif time_scale == "daily":
-        a = "day_of_week"
+        a = "Day of Week"
     else:
         a = "hour_of_day"
     return plot1_altair(df1, a, cat_compare), plot2_altair(df1, a, cat_compare)

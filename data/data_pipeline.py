@@ -5,6 +5,7 @@ import pandas as pd
 
 from data_functions import (
     resample_df,
+    trim_df_dates_to_full_days,
     drop_and_rename_columns,
     add_date_features,
     pivot_longer_by_humidity_and_temperature,
@@ -20,6 +21,7 @@ DATA_PATH = "data/energydata_complete.csv"
 temperature_df_full = (
     pd.read_csv(DATA_PATH)
     .pipe(resample_df)
+    .pipe(trim_df_dates_to_full_days)
     .pipe(drop_and_rename_columns)
     .pipe(add_date_features)
     .pipe(pivot_longer_by_humidity_and_temperature)
@@ -31,6 +33,7 @@ temperature_df_full = (
 energy_df_full = (
     pd.read_csv(DATA_PATH)
     .pipe(resample_df)
+    .pipe(trim_df_dates_to_full_days)
     .pipe(drop_and_rename_columns)
     .pipe(add_date_features)
     .pipe(add_features_for_energy_comparison)

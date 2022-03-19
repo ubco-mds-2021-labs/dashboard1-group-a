@@ -38,10 +38,10 @@ tab2_selector = html.Div(
 date_picker = dcc.DatePickerRange(
     id="my-date-picker-range",
     min_date_allowed=date(2016, 1, 12),
-    max_date_allowed=date(2016, 5, 27),
+    max_date_allowed=date(2016, 5, 26),
     initial_visible_month=date(2016, 1, 12),
     start_date=date(2016, 1, 12),
-    end_date=date(2016, 5, 27),
+    end_date=date(2016, 1, 19),
 )
 
 

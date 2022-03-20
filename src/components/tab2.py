@@ -6,6 +6,7 @@ from dash.dependencies import Input, Output
 
 from data.data import energy_df_full
 from ..app import app
+from .style import plot_style_tab2,title_style_tab2
 
 alt.data_transformers.disable_max_rows()
 
@@ -18,7 +19,7 @@ def energy_plot(start_date = "2016-01-12", end_date = "2016-01-19"):
         "Energy Use - Appliances (Wh)",
         "Energy Use - Lights (Wh)",
     ]
-    
+
     # Apply Filters
     energy_df_filtered = energy_df_full[necessary_cols]
     mask = (energy_df_filtered["Date"] > start_date) & (
@@ -47,7 +48,7 @@ def weather_plot(start_date = "2016-01-12", end_date = "2016-01-19", ycol="Tempe
     # Filtering values
     necessary_cols = ["Date"]
     necessary_cols.append(ycol)
-    
+
     # Apply Filters
     energy_df_filtered = energy_df_full[necessary_cols]
     mask = (energy_df_filtered["Date"] > start_date) & (
@@ -67,12 +68,12 @@ def weather_plot(start_date = "2016-01-12", end_date = "2016-01-19", ycol="Tempe
 plot1a = html.Iframe(
     id="plot1a",
     srcDoc=energy_plot(),
-    style={"border-width": "0", "width": "100%", "height": "400px"},
+    style=plot_style_tab2,
 )
 plot1b = html.Iframe(
     id="plot1b",
     srcDoc=weather_plot(ycol="Temperature Outside (C)"),
-    style={"border-width": "0", "width": "100%", "height": "400px"},
+    style=plot_style_tab2,
 )
 
 
@@ -80,9 +81,9 @@ TAB2 = dbc.Tab(
     label="Energy Usage",
     tab_id="tab-1",
     children=[
-        "Total Energy Usage over Time",
+        dbc.Row("Total Energy Usage over Time",style=title_style_tab2),
         plot1a,
-        "Climate Factor over Time",
+        dbc.Row("Climate Factor over Time",style =title_style_tab2),
         plot1b,
     ],
 )
@@ -97,7 +98,7 @@ def update_plot1a(start_date, end_date):
     return energy_plot(start_date,end_date)
 
 @app.callback(
-    Output("plot1b", "srcDoc"),  
+    Output("plot1b", "srcDoc"),
     Input('my-date-picker-range', 'start_date'),
     Input('my-date-picker-range', 'end_date'),
     Input("chart_dropdown", "value")

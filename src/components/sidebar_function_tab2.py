@@ -3,7 +3,7 @@ from dash import Input, Output, html
 import dash_bootstrap_components as dbc
 from ..app import app
 from datetime import date
-
+from .style import dropdown_style,sub_title_style,checklist_style,date_picker_style
 
 TAB2_DROPDOWN = dcc.Dropdown(
     id="tab2_dropdown",
@@ -13,12 +13,12 @@ TAB2_DROPDOWN = dcc.Dropdown(
         {"label": "Windspeed", "value": 3},
     ],
     value=1,
-    style={"color": "blue"},
+    style=dropdown_style,
 )
 
 tab2_selector = html.Div(
     [
-        dbc.Label("Include:", class_name="sub_title_2"),
+        dbc.Label("Include:", style=sub_title_style),
         dbc.Checklist(
             id="selection_tab2",
             options=[
@@ -29,9 +29,9 @@ tab2_selector = html.Div(
             ],
             value=["Low Outside Humidity"],
             inline=False,
+            style=checklist_style
         ),
     ],
-    className="mb-2",
 )
 
 
@@ -42,6 +42,7 @@ date_picker = dcc.DatePickerRange(
     initial_visible_month=date(2016, 1, 12),
     start_date=date(2016, 1, 12),
     end_date=date(2016, 1, 19),
+    style=date_picker_style,
 )
 
 
@@ -56,6 +57,6 @@ weather_list = [
 choice = dcc.Dropdown(
     id="chart_dropdown",
     value="Temperature Outside (C)",
-    style={"color": "blue"},
+    style=dropdown_style,
     options=[{"label": i, "value": i} for i in weather_list],
 )

@@ -120,7 +120,7 @@ def update_plot(tab1_dropdown, selection_tab1, time_scale):
     elif time_scale == "daily":
         a = "Day of Week"
     else:
-        a = "hour_of_day"
+        a = "Hour of Day"
     return plot1_altair(df1, a, cat_compare), plot2_altair(df1, a, cat_compare)
 
 

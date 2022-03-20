@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 from data.data import temperature_df_full
 import altair as alt
 from ..app import app
-
+from .style import plot_style_tab1,title_style_tab1
 alt.data_transformers.disable_max_rows()
 
 
@@ -75,12 +75,12 @@ def plot2_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type
 plot1 = html.Iframe(
     id="plot1",
     srcDoc=plot1_altair(temperature_df_full, xcol="Date"),
-    style={"width": "100%", "height": "400px"},
+    style=plot_style_tab1,
 )
 plot2 = html.Iframe(
     id="plot2",
     srcDoc=plot2_altair(temperature_df_full, xcol="Date"),
-    style={"width": "100%", "height": "400px"},
+    style=plot_style_tab1,
 )
 
 
@@ -88,9 +88,9 @@ TAB1 = dbc.Tab(
     tab_id="tab-0",
     label="House Climate",
     children=[
-        "The average of Temperature of the selected rooms is plotted with the selected time range",
+        dbc.Row("The average of Temperature of the selected rooms is plotted with the selected time range",style = title_style_tab1),
         plot1,
-        "The average of Relative Humidity of the selected rooms is plotted with the selected time range",
+        dbc.Row("The average of Relative Humidity of the selected rooms is plotted with the selected time range",style=title_style_tab1),
         plot2,
     ],
 )

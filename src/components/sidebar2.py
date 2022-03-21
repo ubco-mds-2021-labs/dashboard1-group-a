@@ -9,7 +9,7 @@ from data.data import energy_df_full
 SIDEBAR2 = [dbc.Row("Energy Dashboard",class_name="title",style={"font-size":"30px","padding-left": "10px","padding-top": "10px"}),
 dbc.Row("___________________________________________"),
 html.Br(),
-dbc.Row("This dashboard explores the relationship between climate factors and energy usage. You can choose the factors from the dropdown below.",class_name="description"),
+dbc.Row("This part of the dashboard explores energy usage over time in the home. You can choose date range from the dropdown below. You can also explore what the weather was doing during the same time frame using the Climate Factor dropdown. ",class_name="description"),
 html.Br(),
 dbc.Label("Choose Date Range:",class_name="sub_title_2",style={"font-size":"20px"}),
 html.Br(),

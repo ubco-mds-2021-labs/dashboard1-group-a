@@ -83,14 +83,14 @@ def energy_plot(start_date = "2016-01-12", end_date = "2016-01-19"):
         )
         .mark_bar()
         .encode(
-            alt.X("Date:T", axis=alt.Axis(title="Elapsed Time")),
+            alt.X("Date:T", axis=alt.Axis(title="Elapsed Time", format="%b %d %I%p", labelOverlap=False, labelAngle=-45)),
             alt.Y("value:Q", axis=alt.Axis(title="Energy Usage in wH")),
             color="total:N",
         )
         .properties(height=200, width=400)
     )
     
-    chart1a = alt.vconcat(alt.hconcat(chart1, chart2), chart3.properties(width=875))
+    chart1a = alt.vconcat(alt.hconcat(chart1, chart2), chart3.properties(width=870))
 
     return chart1a.to_html()
 
@@ -110,8 +110,8 @@ def weather_plot(start_date = "2016-01-12", end_date = "2016-01-19", ycol="Tempe
     chart1b = (
         alt.Chart(energy_df_filtered, title ="Trend of Climate Factor over Time")
         .mark_line(color="firebrick")
-        .encode(alt.X("Date:T", axis=alt.Axis(title="Elapsed Time")), y=ycol)
-        .properties(height=200, width=875)
+        .encode(alt.X("Date:T", axis=alt.Axis(title="Elapsed Time", format="%b %d %I%p", labelOverlap=False, labelAngle=-45)), y=ycol)
+        .properties(height=200, width=870)
     )
     return chart1b.to_html()
 
@@ -119,12 +119,12 @@ def weather_plot(start_date = "2016-01-12", end_date = "2016-01-19", ycol="Tempe
 plot1a = html.Iframe(
     id="plot1a",
     srcDoc=energy_plot(),
-    style={"border-width": "10", "width": "100%", "height": "610px"},
+    style={"border-width": "10", "width": "100%", "height": "650px"},
 )
 plot1b = html.Iframe(
     id="plot1b",
     srcDoc=weather_plot(ycol="Temperature Outside (C)"),
-    style={"border-width": "0", "width": "100%", "height": "400px"},
+    style={"border-width": "0", "width": "100%", "height": "380px"},
 )
 
 

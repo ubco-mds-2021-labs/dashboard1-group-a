@@ -24,6 +24,35 @@ def resample_df(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def trim_df_dates_to_full_days(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Trims down our time series dates to our first and last full
+    days (from 00h00 to 23h00)
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        Our dataframe after resampling with a date column to filter on.
+
+    Returns
+    -------
+    pd.DataFrame
+        Our passed in df, with rows removed from the
+        begining and end of the time series.
+    """
+    # Programatically get Date Boundaries to trim to full days.
+    start_date_boundary = df.loc[df["date"].dt.hour == 0].head(1)["date"].item()
+
+    end_date_boundary = df.loc[df["date"].dt.hour == 23].tail(1)["date"].item()
+
+    # Trim df to only dates between our boundaries.
+    trimmed_df = df[
+        (df["date"] >= start_date_boundary) & (df["date"] <= end_date_boundary)
+    ]
+
+    return trimmed_df
+
+
 def drop_and_rename_columns(df: pd.DataFrame) -> pd.DataFrame:
     """
     Drops irrelevent random columns and renames remaining columns
@@ -439,7 +468,7 @@ def get_energy_df_features(df: pd.DataFrame) -> pd.DataFrame:
             "Energy Appliances": "Energy Use - Appliances (Wh)",
             "Energy Lights": "Energy Use - Lights (Wh)",
             "Temperature Outside": "Temperature Outside (C)",
-            "Humididty Outside": "Humididty Outside (%)",
+            "Humidity Outside": "Humidity Outside (%)",
             "Dewpoint": "Dewpoint (C)",
             "Pressure": "Air Pressure (mm Hg)",
             "Windspeed": "Windspeed (m / s)",

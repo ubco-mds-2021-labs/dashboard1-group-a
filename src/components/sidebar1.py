@@ -5,22 +5,23 @@ import dash_bootstrap_components as dbc
 from ..app import app
 from .sidebar_function_tab1 import TAB1_DROPDOWN,time_scale,date_picker_tab1,tab1_selector
 from data.data import temperature_df_full
+from .style import title_style,description_style,sub_title_style,line_style
 
 
-SIDEBAR1 = [dbc.Row("Energy Dashboard",class_name="title",style={"font-size":"30px","padding-left": "10px","padding-top": "10px"}),
-dbc.Row("___________________________________________"),
+SIDEBAR1 = [dbc.Row("Energy Dashboard",style=title_style),
+dbc.Row("___________________________________________",style=line_style),
 html.Br(),
-dbc.Row("This dashboard figure out which factors make a difference to house temperature and humidity. You can choose the factors from the dropdown below.",class_name="description"),
+dbc.Row("This dashboard figure out which factors make a difference to house temperature and humidity. You can choose the factors from the dropdown below.",style=description_style),
 html.Br(),
-dbc.Label("Compare Across:",class_name="sub_title",style={"font-size":"20px"}),
+dbc.Label("Compare Across:",style=sub_title_style),
 html.Br(),
 dbc.Row(TAB1_DROPDOWN),
 html.Br(),
 dbc.Row(tab1_selector),
-dbc.Row("___________________________________________"),
+dbc.Row("___________________________________________",style=line_style),
 dbc.Row(time_scale),
 html.Br(),
-dbc.Label("Choose Date Range:",class_name="sub_title"),
+dbc.Label("Choose Date Range:",style = sub_title_style),
 dbc.Row(date_picker_tab1)
 ]
 

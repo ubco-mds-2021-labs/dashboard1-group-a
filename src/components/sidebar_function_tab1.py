@@ -3,7 +3,7 @@ from dash import Input, Output, html
 import dash_bootstrap_components as dbc
 from ..app import app
 from datetime import date
-
+from .style import dropdown_style,sub_title_style,checklist_style,time_scale_style,date_picker_style
 
 TAB1_DROPDOWN = dcc.Dropdown(
     id="tab1_dropdown",
@@ -14,12 +14,12 @@ TAB1_DROPDOWN = dcc.Dropdown(
         {"label": "Daytime/Nightime", "value": 4},
     ],
     value=1,
-    style={"color": "blue"},
+    style=dropdown_style,
 )
 
 tab1_selector = html.Div(
     [
-        dbc.Label("Include:", class_name="sub_title"),
+        dbc.Label("Include:", style=sub_title_style),
         dbc.Checklist(
             id="selection_tab1",
             options=[
@@ -48,15 +48,15 @@ tab1_selector = html.Div(
                 "Morning",
             ],
             inline=False,
+            style = checklist_style,
         ),
     ],
-    className="mb-2",
 )
 
 
 time_scale = html.Div(
     [
-        dbc.Label("Averaged By:", class_name="sub_title"),
+        dbc.Label("Averaged By:", style = sub_title_style),
         dbc.RadioItems(
             id="time_scale",
             options=[
@@ -67,9 +67,9 @@ time_scale = html.Div(
             ],
             value="full",
             inline=False,
+            style = time_scale_style,
         ),
     ],
-    className="mb-2",
 )
 
 
@@ -80,4 +80,5 @@ date_picker_tab1 = dcc.DatePickerRange(
     initial_visible_month=date(2016, 1, 12),
     start_date=date(2016, 1, 12),
     end_date=date(2016, 5, 27),
+    style = date_picker_style,
 )

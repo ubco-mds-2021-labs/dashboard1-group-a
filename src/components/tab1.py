@@ -9,7 +9,15 @@ alt.data_transformers.disable_max_rows()
 
 
 def plot1_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type"):
-
+    #Changing the plot for hour_of_day and Daytime/Nighttime
+    if (xcol=="Hour of Day") and (cat_compare=="Time of Day"):
+        chart1 = (
+            alt.Chart(temperature_df_full).mark_boxplot()
+            .encode(x="Hour of Day",y="mean(Temperature (C))", color="Time of Day").properties(height=250,width=800)
+            .interactive()
+        )
+        return chart1.to_html()
+        
     # Filter data based on needed columns to reduce memory.
     necessary_cols = ["Temperature (C)"]
     necessary_cols.append(xcol)
@@ -30,18 +38,27 @@ def plot1_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type
                     "Friday",
                     "Saturday",
                     "Sunday",
-                ],
+                ],axis=alt.Axis(grid=False),
             ),
             y="mean(Temperature (C))",
             color=cat_compare,
         )
-        .properties(height=200, width=800)
+        .properties(height=250, width=800)
+        .interactive()
     )
     return chart1.to_html()
 
 
 def plot2_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type"):
-
+    #Changing the plot for hour_of_day and Daytime/Nighttime
+    if (xcol=="Hour of Day") and (cat_compare=="Time of Day"):
+        chart1 = (
+            alt.Chart(temperature_df_full).mark_boxplot()
+            .encode(x="Hour of Day",y="mean(Relative Humidity (%))", color="Time of Day").properties(height=250,width=800)
+            .interactive()
+        )
+        return chart1.to_html()
+    
     # Filter data based on needed columns to reduce memory.
     necessary_cols = ["Relative Humidity (%)"]
     necessary_cols.append(xcol)
@@ -62,12 +79,13 @@ def plot2_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type
                     "Friday",
                     "Saturday",
                     "Sunday",
-                ],
+                ], axis=alt.Axis(grid=False),
             ),
             y="mean(Relative Humidity (%))",
             color=cat_compare,
         )
-        .properties(height=200, width=800)
+        .properties(height=250, width=800)
+        .interactive()
     )
     return chart2.to_html()
 

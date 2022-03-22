@@ -14,6 +14,7 @@ def plot1_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type
         chart1 = (
             alt.Chart(temperature_df_full).mark_boxplot()
             .encode(x="Hour of Day",y="mean(Temperature (C))", color="Time of Day").properties(height=200,width=800)
+            .interactive()
         )
         return chart1.to_html()
         
@@ -43,6 +44,7 @@ def plot1_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type
             color=cat_compare,
         )
         .properties(height=200, width=800)
+        .interactive()
     )
     return chart1.to_html()
 
@@ -53,6 +55,7 @@ def plot2_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type
         chart1 = (
             alt.Chart(temperature_df_full).mark_boxplot()
             .encode(x="Hour of Day",y="mean(Relative Humidity (%))", color="Time of Day").properties(height=200,width=800)
+            .interactive()
         )
         return chart1.to_html()
     
@@ -82,6 +85,7 @@ def plot2_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type
             color=cat_compare,
         )
         .properties(height=200, width=800)
+        .interactive()
     )
     return chart2.to_html()
 

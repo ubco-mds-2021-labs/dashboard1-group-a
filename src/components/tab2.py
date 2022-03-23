@@ -44,7 +44,7 @@ def energy_plot(start_date = "2016-01-12", end_date = "2016-01-19"):
         ).properties(height=200, width=400)
     
     ##first chart - layer 2
-    BB = alt.Chart(energy_df_filtered).mark_bar(color="#1f77b4").encode(
+    BB = alt.Chart(energy_df_filtered).mark_bar(color="#5778a4").encode(
             alt.X("Day of Week", sort=[ "Monday",
                                         "Tuesday",
                                         "Wednesday",
@@ -60,7 +60,7 @@ def energy_plot(start_date = "2016-01-12", end_date = "2016-01-19"):
     chart1 = BB + AA
     
     ##second chart - layer 1
-    CC = alt.Chart(energy_df_filtered, title = "Average Energy Usage by Hour of Day").mark_line(color="#1f77b4").encode(
+    CC = alt.Chart(energy_df_filtered, title = "Average Energy Usage by Hour of Day").mark_line(color="#5778a4").encode(
             alt.X("Hour of Day", axis=alt.Axis(title="Hour of Day"), scale=alt.Scale(domain=[1,23])),
             alt.Y("mean(Energy Use - Appliances (Wh))"),
         ).properties(height=200, width=400)
@@ -84,9 +84,9 @@ def energy_plot(start_date = "2016-01-12", end_date = "2016-01-19"):
         )
         .mark_bar()
         .encode(
-            alt.X("Date:T", axis=alt.Axis(title="Elapsed Time", format="%b %d %I%p", labelOverlap=False, labelAngle=-45)),
+            alt.X("Date:T", axis=alt.Axis(title="Datetime", format="%b %d %I%p", labelOverlap=False, labelAngle=-45)),
             alt.Y("value:Q", axis=alt.Axis(title="Energy Usage in wH")),
-            color="total:N",
+            color=alt.Color("total:N", legend=alt.Legend(orient="top", title=None))
         )
         .properties(height=200, width=400)
     )
@@ -111,7 +111,7 @@ def weather_plot(start_date = "2016-01-12", end_date = "2016-01-19", ycol="Tempe
     chart1b = (
         alt.Chart(energy_df_filtered, title ="Trend of Climate Factor over Time")
         .mark_line(color="firebrick")
-        .encode(alt.X("Date:T", axis=alt.Axis(title="Elapsed Time", format="%b %d %I%p", labelOverlap=False, labelAngle=-45)), y=ycol)
+        .encode(alt.X("Date:T", axis=alt.Axis(title="Datetime", format="%b %d %I%p", labelOverlap=False, labelAngle=-45)), y=ycol)
         .properties(height=200, width=870)
     )
     return chart1b.to_html()

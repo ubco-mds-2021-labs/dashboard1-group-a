@@ -1,6 +1,6 @@
 
 #style for the whole sidebar
-sidebar_style = {'backgroundColor':'#11324D','color':'white'}
+sidebar_style = {'height':'100%','backgroundColor':'#11324D','color':'white',"position":"fixed"}
 #style for the sidebar items
 title_style = {"color":"white","font-size":"30px","padding-left": "15px","padding-top": "10px"}
 description_style = {"color":"white","font-size":"15px"}
@@ -21,5 +21,5 @@ plot1a_style = {"border-width": "10", "width": "100%", "height": "700px"}
 plot1b_style = {"border-width": "0", "width": "100%", "height": "380px"}
 
 #for the whole tab content
-whole_tab_style={"background":"#faf7ed"}
+whole_tab_style={"background":"#faf7ed","position":"related"}
 label_style_active={"color": "#eb9226","font-weight":"bold"}

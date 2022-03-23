@@ -22,4 +22,5 @@ plot1b_style = {"border-width": "0", "width": "100%", "height": "380px"}
 
 #for the whole tab content
 whole_tab_style={"position":"related"}
-label_style_active={"color": "#eb9226","font-weight":"bold"}
+label_style_active={"font-weight":"bold"}
+label_style_init={"color":"#5778A4"}

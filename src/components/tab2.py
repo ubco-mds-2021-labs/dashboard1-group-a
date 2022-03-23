@@ -86,7 +86,7 @@ def energy_plot(start_date = "2016-01-12", end_date = "2016-01-19"):
         .encode(
             alt.X("Date:T", axis=alt.Axis(title="Elapsed Time", format="%b %d %I%p", labelOverlap=False, labelAngle=-45)),
             alt.Y("value:Q", axis=alt.Axis(title="Energy Usage in wH")),
-            color="total:N",
+            color=alt.Color("total:N", legend=alt.Legend(orient="top")),
         )
         .properties(height=200, width=400)
     )

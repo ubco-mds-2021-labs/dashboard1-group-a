@@ -6,7 +6,7 @@ from dash.dependencies import Input, Output
 
 from data.data import energy_df_full
 from ..app import app
-from .style import plot_style_tab2,title_style_tab2
+from .style import plot1a_style,plot1b_style,whole_tab_style,label_style_active
 
 alt.data_transformers.disable_max_rows()
 
@@ -16,7 +16,7 @@ def energy_plot(start_date = "2016-01-12", end_date = "2016-01-19"):
     # Filtering values
     necessary_cols = [
         "Date",
-        "Day of Week", 
+        "Day of Week",
         "Hour of Day",
         "Energy Use - Appliances (Wh)",
         "Energy Use - Lights (Wh)",
@@ -42,7 +42,7 @@ def energy_plot(start_date = "2016-01-12", end_date = "2016-01-19"):
                   axis=alt.Axis(title="Day of Week")),
             alt.Y("Energy Use - Lights (Wh)", title = ""),
         ).properties(height=200, width=400)
-    
+
     ##first chart - layer 2
     BB = alt.Chart(energy_df_filtered).mark_bar(color="blue").encode(
             alt.X("Day of Week", sort=[ "Monday",
@@ -55,26 +55,26 @@ def energy_plot(start_date = "2016-01-12", end_date = "2016-01-19"):
                                     ]),
             alt.Y("Energy Use - Appliances (Wh)", title = "Energy Usage in Wh"),
         ).properties(height=200, width=400)
-    
+
     #combining layer 1 and layer 2 for first chart
     chart1 = BB + AA
-    
+
     ##second chart - layer 1
     CC = alt.Chart(energy_df_filtered, title = "Average Energy Usage by Hour of Day").mark_line(color="blue").encode(
             alt.X("Hour of Day", axis=alt.Axis(title="Hour of Day"), scale=alt.Scale(domain=[1,23])),
             alt.Y("mean(Energy Use - Appliances (Wh))"),
         ).properties(height=200, width=400)
-    
+
     ## second chart - layer 2
     DD = alt.Chart(energy_df_filtered).mark_line(color="darkorange").encode(
             alt.X("Hour of Day", scale=alt.Scale(domain=[1,23])),
             alt.Y("mean(Energy Use - Lights (Wh))", axis=alt.Axis(title="Energy Usage in Wh")),
         ).properties(height=200, width=400)
-    
+
     #combining layer 1 and layer 2 for secn chart
     chart2 = CC + DD
-    
-     
+
+
     #third chart (original chart)
     chart3 = (
         alt.Chart(energy_df_filtered, title = "Total Energy Usage in the Home by Hour")
@@ -90,7 +90,7 @@ def energy_plot(start_date = "2016-01-12", end_date = "2016-01-19"):
         )
         .properties(height=200, width=400)
     )
-    
+
     chart1a = alt.vconcat(alt.hconcat(chart1, chart2), chart3.properties(width=870))
 
     return chart1a.to_html()
@@ -120,23 +120,25 @@ def weather_plot(start_date = "2016-01-12", end_date = "2016-01-19", ycol="Tempe
 plot1a = html.Iframe(
     id="plot1a",
     srcDoc=energy_plot(),
-    style={"border-width": "10", "width": "100%", "height": "650px"},
+    style=plot1a_style,
 )
 plot1b = html.Iframe(
     id="plot1b",
     srcDoc=weather_plot(ycol="Temperature Outside (C)"),
-    style={"border-width": "0", "width": "100%", "height": "380px"},
+    style=plot1b_style,
 )
 
 
 TAB2 = dbc.Tab(
     label="Energy Usage",
+    active_label_style=label_style_active,
     tab_id="tab-1",
     children=[
         " ",
         plot1a,
         plot1b,
     ],
+    style = whole_tab_style,
 )
 
 ## Callback functions

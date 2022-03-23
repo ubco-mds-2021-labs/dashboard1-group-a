@@ -106,7 +106,7 @@ Here are the tables you are expected to complete (the first one is pre-filled in
 | Repository Setup   | -             | 100%          | -             | -             |
 | Sketch             | 25%           | 75%           | -             | -             |
 | Documentation      | 20%           | 25%           | 30%           | 25%           |
-| Project Management | 10%           | 70%           | 10%           | 10%           |
+| Project Management | 15%           | 50%           | 25%           | 10%           |
 | Troubleshooting    | -             | -             | -             | -             |
 
 Brief notes/explanations (optional):

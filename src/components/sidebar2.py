@@ -10,7 +10,7 @@ from .style import title_style,description_style,sub_title_style,line_style
 SIDEBAR2 = [dbc.Row("Energy Dashboard",style=title_style),
 dbc.Row("___________________________________________",style = line_style),
 html.Br(),
-dbc.Row("This dashboard explores the relationship between climate factors and energy usage. You can choose the factors from the dropdown below.",style=description_style),
+dbc.Row("This part of the dashboard explores energy usage over time in the home. You can choose date range from the dropdown below. You can also explore what the weather was doing during the same time frame using the Climate Factor dropdown. ",style=description_style),
 html.Br(),
 dbc.Label("Choose Date Range:",style=sub_title_style),
 html.Br(),

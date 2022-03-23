@@ -1,6 +1,6 @@
 
 #style for the whole sidebar
-sidebar_style = {'backgroundColor':'grey','color':'white'}
+sidebar_style = {'backgroundColor':'#11324D','color':'white'}
 #style for the sidebar items
 title_style = {"color":"white","font-size":"30px","padding-left": "15px","padding-top": "10px"}
 description_style = {"color":"white","font-size":"15px"}
@@ -12,11 +12,14 @@ time_scale_style={"color":"white"}
 date_picker_style={"background-color":"inherit"}
 
 #style for tab1
-plot_style_tab1={"width": "100%", "height": "400px"}
-title_style_tab1 = {"color":"black","font-size":"20px"}
+plot_style_tab1={"border-width": "0","width": "100%", "height": "380px"}
 
 
 
 #style for tab2
-plot_style_tab2={"border-width": "0", "width": "100%", "height": "400px"}
-title_style_tab2 = {"color":"black","font-size":"20px"}
+plot1a_style = {"border-width": "10", "width": "100%", "height": "700px"}
+plot1b_style = {"border-width": "0", "width": "100%", "height": "380px"}
+
+#for the whole tab content
+whole_tab_style={"background":"#faf7ed"}
+label_style_active={"color": "#eb9226","font-weight":"bold"}

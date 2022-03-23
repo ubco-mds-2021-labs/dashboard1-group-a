@@ -26,8 +26,8 @@ def resample_df(df: pd.DataFrame) -> pd.DataFrame:
 
 def trim_df_dates_to_full_days(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Trims down our time series dates to our first and last full
-    days (from 00h00 to 23h00)
+    Trims down our time series dates to our first Monday and last full
+    Sunday (from 00h00 to 23h00)
 
     Parameters
     ----------
@@ -41,9 +41,17 @@ def trim_df_dates_to_full_days(df: pd.DataFrame) -> pd.DataFrame:
         begining and end of the time series.
     """
     # Programatically get Date Boundaries to trim to full days.
-    start_date_boundary = df.loc[df["date"].dt.hour == 0].head(1)["date"].item()
+    start_date_boundary = (
+        df.loc[(df["date"].dt.hour == 0) & (df["date"].dt.day_name() == "Monday")]
+        .head(1)["date"]
+        .item()
+    )
 
-    end_date_boundary = df.loc[df["date"].dt.hour == 23].tail(1)["date"].item()
+    end_date_boundary = (
+        df.loc[(df["date"].dt.hour == 23) & (df["date"].dt.day_name() == "Sunday")]
+        .tail(1)["date"]
+        .item()
+    )
 
     # Trim df to only dates between our boundaries.
     trimmed_df = df[

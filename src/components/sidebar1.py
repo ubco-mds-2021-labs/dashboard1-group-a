@@ -19,10 +19,12 @@ dbc.Row(TAB1_DROPDOWN),
 html.Br(),
 dbc.Row(tab1_selector),
 dbc.Row("___________________________________________",style=line_style),
+dbc.Label("Choose Date Range:",style = sub_title_style),
+dbc.Row(date_picker_tab1),
+html.Br(),
 dbc.Row(time_scale),
 html.Br(),
-dbc.Label("Choose Date Range:",style = sub_title_style),
-dbc.Row(date_picker_tab1)
+
 ]
 
 

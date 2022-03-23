@@ -12,7 +12,7 @@ time_scale_style={"color":"white"}
 date_picker_style={"background-color":"inherit"}
 
 #style for tab1
-plot_style_tab1={"border-width": "0","width": "100%", "height": "300px"}
+plot_style_tab1={"border-width": "0","width": "100%", "height": "380px"}
 title_style_tab1 = {"font-weight":"bold","padding-left": "15px","border-width": "0","color":"black","font-size":"20px"}
 
 

@@ -6,7 +6,8 @@ from dash.dependencies import Input, Output
 
 from data.data import energy_df_full
 from ..app import app
-from .style import plot_style_tab2, title_style_tab2
+from .style import plot1a_style,plot1b_style,whole_tab_style,label_style_active
+
 
 alt.data_transformers.disable_max_rows()
 
@@ -30,6 +31,7 @@ def energy_plot(start_date="2016-01-18", end_date="2016-01-24"):
     energy_df_filtered = energy_df_filtered[mask]
 
     ##first chart - layer 1
+
     AA = (
         alt.Chart(energy_df_filtered, title="Average Energy Usage by Weekday")
         .mark_bar(color="darkorange")
@@ -75,6 +77,7 @@ def energy_plot(start_date="2016-01-18", end_date="2016-01-24"):
     )
 
     # combining layer 1 and layer 2 for first chart
+
     chart1 = BB + AA
 
     ##second chart - layer 1
@@ -88,6 +91,7 @@ def energy_plot(start_date="2016-01-18", end_date="2016-01-24"):
                 scale=alt.Scale(domain=[1, 23]),
             ),
             alt.Y("mean(Energy Use - Appliances (Wh))"),
+
         )
         .properties(height=200, width=400)
     )
@@ -110,6 +114,9 @@ def energy_plot(start_date="2016-01-18", end_date="2016-01-24"):
     chart2 = CC + DD
 
     # third chart (original chart)
+
+
+
     chart3 = (
         alt.Chart(energy_df_filtered, title="Total Energy Usage in the Home by Hour")
         .transform_fold(
@@ -128,7 +135,7 @@ def energy_plot(start_date="2016-01-18", end_date="2016-01-24"):
                 ),
             ),
             alt.Y("value:Q", axis=alt.Axis(title="Energy Usage in wH")),
-            color="total:N",
+            color=alt.Color("total:N", legend=alt.Legend(orient="top")),
         )
         .properties(height=200, width=400)
     )
@@ -175,23 +182,25 @@ def weather_plot(
 plot1a = html.Iframe(
     id="plot1a",
     srcDoc=energy_plot(),
-    style={"border-width": "10", "width": "100%", "height": "650px"},
+    style=plot1a_style,
 )
 plot1b = html.Iframe(
     id="plot1b",
     srcDoc=weather_plot(ycol="Temperature Outside (C)"),
-    style={"border-width": "0", "width": "100%", "height": "380px"},
+    style=plot1b_style,
 )
 
 
 TAB2 = dbc.Tab(
     label="Energy Usage",
+    active_label_style=label_style_active,
     tab_id="tab-1",
     children=[
         " ",
         plot1a,
         plot1b,
     ],
+    style = whole_tab_style,
 )
 
 ## Callback functions

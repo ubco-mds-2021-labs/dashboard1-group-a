@@ -4,11 +4,19 @@ import dash_bootstrap_components as dbc
 from data.data import temperature_df_full
 import altair as alt
 from ..app import app
-from .style import plot_style_tab1,title_style_tab1
+from .style import plot_style_tab1,whole_tab_style,label_style_active
 alt.data_transformers.disable_max_rows()
 
 
 def plot1_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type"):
+    #Changing the plot for hour_of_day and Daytime/Nighttime
+    if (xcol=="Hour of Day") and (cat_compare=="Time of Day"):
+        chart1 = (
+            alt.Chart(temperature_df_full,title="The average of Temperature of the selected rooms is plotted with the selected time range").mark_boxplot()
+            .encode(x="Hour of Day",y="mean(Temperature (C))", color="Time of Day").properties(height=250,width=800)
+            .interactive()
+        )
+        return chart1.to_html()
 
     # Filter data based on needed columns to reduce memory.
     necessary_cols = ["Temperature (C)"]
@@ -17,7 +25,7 @@ def plot1_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type
     temperature_df_filtered = temperature_df_full[necessary_cols]
 
     chart1 = (
-        alt.Chart(temperature_df_filtered)
+        alt.Chart(temperature_df_filtered,title="The average of Temperature of the selected rooms is plotted with the selected time range")
         .mark_line()
         .encode(
             x=alt.X(
@@ -30,17 +38,26 @@ def plot1_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type
                     "Friday",
                     "Saturday",
                     "Sunday",
-                ],
+                ],axis=alt.Axis(grid=False),
             ),
             y="mean(Temperature (C))",
             color=cat_compare,
         )
-        .properties(height=200, width=800)
+        .properties(height=250, width=800)
+        .interactive()
     )
     return chart1.to_html()
 
 
 def plot2_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type"):
+    #Changing the plot for hour_of_day and Daytime/Nighttime
+    if (xcol=="Hour of Day") and (cat_compare=="Time of Day"):
+        chart1 = (
+            alt.Chart(temperature_df_full,title="The average of Relative Humidity of the selected rooms is plotted with the selected time range").mark_boxplot()
+            .encode(x="Hour of Day",y="mean(Relative Humidity (%))", color="Time of Day").properties(height=250,width=800)
+            .interactive()
+        )
+        return chart1.to_html()
 
     # Filter data based on needed columns to reduce memory.
     necessary_cols = ["Relative Humidity (%)"]
@@ -49,7 +66,7 @@ def plot2_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type
     temperature_df_filtered = temperature_df_full[necessary_cols]
 
     chart2 = (
-        alt.Chart(temperature_df_filtered)
+        alt.Chart(temperature_df_filtered,title="The average of Relative Humidity of the selected rooms is plotted with the selected time range")
         .mark_line()
         .encode(
             x=alt.X(
@@ -62,12 +79,13 @@ def plot2_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type
                     "Friday",
                     "Saturday",
                     "Sunday",
-                ],
+                ], axis=alt.Axis(grid=False),
             ),
             y="mean(Relative Humidity (%))",
             color=cat_compare,
         )
-        .properties(height=200, width=800)
+        .properties(height=250, width=800)
+        .interactive()
     )
     return chart2.to_html()
 
@@ -87,12 +105,12 @@ plot2 = html.Iframe(
 TAB1 = dbc.Tab(
     tab_id="tab-0",
     label="House Climate",
+    active_label_style=label_style_active,
     children=[
-        dbc.Row("The average of Temperature of the selected rooms is plotted with the selected time range",style = title_style_tab1),
         plot1,
-        dbc.Row("The average of Relative Humidity of the selected rooms is plotted with the selected time range",style=title_style_tab1),
         plot2,
     ],
+    style =whole_tab_style,
 )
 
 

@@ -3,7 +3,7 @@
 sidebar_style = {'height':'100%','backgroundColor':'#11324D','color':'white',"position":"fixed"}
 #style for the sidebar items
 title_style = {"color":"white","font-size":"30px","padding-left": "15px","padding-top": "10px"}
-description_style = {"color":"white","font-size":"15px"}
+description_style = {"color":"white","font-size":"15px","padding-left": "10px","padding-right": "10px"}
 sub_title_style = {"font-size":"20px"}
 line_style = {"color":"white"}
 dropdown_style = {"color": "blue","width": "93%"}

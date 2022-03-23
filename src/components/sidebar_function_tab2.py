@@ -3,7 +3,7 @@ from dash import Input, Output, html
 import dash_bootstrap_components as dbc
 from ..app import app
 from datetime import date
-from .style import dropdown_style,sub_title_style,checklist_style,date_picker_style
+from .style import dropdown_style, sub_title_style, checklist_style, date_picker_style
 
 TAB2_DROPDOWN = dcc.Dropdown(
     id="tab2_dropdown",
@@ -29,7 +29,7 @@ tab2_selector = html.Div(
             ],
             value=["Low Outside Humidity"],
             inline=False,
-            style=checklist_style
+            style=checklist_style,
         ),
     ],
 )
@@ -37,11 +37,11 @@ tab2_selector = html.Div(
 
 date_picker = dcc.DatePickerRange(
     id="my-date-picker-range",
-    min_date_allowed=date(2016, 1, 12),
-    max_date_allowed=date(2016, 5, 26),
-    initial_visible_month=date(2016, 1, 12),
-    start_date=date(2016, 1, 12),
-    end_date=date(2016, 1, 19),
+    min_date_allowed=date(2016, 1, 18),
+    max_date_allowed=date(2016, 5, 22),
+    initial_visible_month=date(2016, 1, 18),
+    start_date=date(2016, 1, 18),
+    end_date=date(2016, 1, 24),
     style=date_picker_style,
 )
 

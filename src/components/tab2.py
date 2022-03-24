@@ -6,7 +6,7 @@ from dash.dependencies import Input, Output
 
 from data.data import energy_df_full
 from ..app import app
-from .style import plot1a_style,plot1b_style,whole_tab_style,label_style_active
+from .style import plot1a_style,plot1b_style,whole_tab_style,label_style_active,label_style_init
 
 
 alt.data_transformers.disable_max_rows()
@@ -193,6 +193,7 @@ plot1b = html.Iframe(
 
 TAB2 = dbc.Tab(
     label="Energy Usage",
+    label_style=label_style_init,
     active_label_style=label_style_active,
     tab_id="tab-1",
     children=[

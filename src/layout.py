@@ -12,7 +12,7 @@ LAYOUT = dbc.Container(
         children=[
             SIDEBAR,
             dbc.Col(
-                md=9,
+                width={"size": 9, "offset": 3},
                 children=dbc.Tabs(
                     children=[TAB1, TAB2], id="tab_selection", active_tab="tab-0"
                 ),

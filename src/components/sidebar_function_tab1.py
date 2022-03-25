@@ -66,7 +66,7 @@ time_scale = html.Div(
         dbc.RadioItems(
             id="time_scale",
             options=[
-                {"label": "No Average (Raw Data)", "value": "full"},
+                {"label": "No Average (Full Data)", "value": "full"},
                 {"label": "Month of year", "value": "month"},
                 {"label": "Day of week", "value": "daily"},
                 {"label": "Hour of day", "value": "hourly"},

@@ -55,35 +55,25 @@ def energy_plot(start_date="2016-01-18", end_date="2016-01-24"):
     )
 
     ##first chart - layer 2
-    BB = (
-        alt.Chart(energy_df_filtered)
-        .mark_bar(color="blue")
-        .encode(
-            alt.X(
-                "Day of Week",
-                sort=[
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday",
-                    "Sunday",
-                ],
-            ),
-            alt.Y("Energy Use - Appliances (Wh)", title="Energy Usage in Wh"),
-        )
-        .properties(height=200, width=400)
-    )
-
-    # combining layer 1 and layer 2 for first chart
-
+    BB = alt.Chart(energy_df_filtered).mark_bar(color="#5778a4").encode(
+            alt.X("Day of Week", sort=[ "Monday",
+                                        "Tuesday",
+                                        "Wednesday",
+                                        "Thursday",
+                                        "Friday",
+                                        "Saturday",
+                                        "Sunday",
+                                    ]),
+            alt.Y("Energy Use - Appliances (Wh)", title = "Energy Usage in Wh"),
+        ).properties(height=200, width=400)
+    
+    #combining layer 1 and layer 2 for first chart
     chart1 = BB + AA
 
     ##second chart - layer 1
     CC = (
         alt.Chart(energy_df_filtered, title="Average Energy Usage by Hour of Day")
-        .mark_line(color="blue")
+        .mark_line(color="#5778a4")
         .encode(
             alt.X(
                 "Hour of Day",
@@ -128,14 +118,14 @@ def energy_plot(start_date="2016-01-18", end_date="2016-01-24"):
             alt.X(
                 "Date:T",
                 axis=alt.Axis(
-                    title="Elapsed Time",
+                    title="Datetime",
                     format="%b %d %I%p",
                     labelOverlap=False,
                     labelAngle=-45,
                 ),
             ),
             alt.Y("value:Q", axis=alt.Axis(title="Energy Usage in wH")),
-            color=alt.Color("total:N", legend=alt.Legend(orient="top")),
+            color=alt.Color("total:N", legend=alt.Legend(orient="top", title=None)),
         )
         .properties(height=200, width=400)
     )
@@ -166,7 +156,7 @@ def weather_plot(
             alt.X(
                 "Date:T",
                 axis=alt.Axis(
-                    title="Elapsed Time",
+                    title="Datetime",
                     format="%b %d %I%p",
                     labelOverlap=False,
                     labelAngle=-45,

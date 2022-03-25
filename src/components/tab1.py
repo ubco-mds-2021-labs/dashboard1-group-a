@@ -23,14 +23,28 @@ def plot1_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type
     necessary_cols.append(xcol)
     necessary_cols.append(cat_compare)
     temperature_df_filtered = temperature_df_full[necessary_cols]
-
-    chart1 = (
+    if (xcol == "Date"):
+        chart1 = (
         alt.Chart(temperature_df_filtered,title="The average of Temperature of the selected rooms is plotted with the selected time range")
         .mark_line()
         .encode(
             x=alt.X(
-                xcol,
-                sort=[
+                xcol,axis=alt.Axis(title="Datetime", grid=False, format="%b %d %I%p", labelOverlap=False, labelAngle=-45),
+            ),
+            y="mean(Temperature (C))",
+            color=cat_compare,
+        )
+        .properties(height=250, width=800)
+        .interactive()
+        )
+    else:
+        chart1 = (
+            alt.Chart(temperature_df_filtered,title="The average of Temperature of the selected rooms is plotted with the selected time range")
+            .mark_line()
+            .encode(
+                x=alt.X(
+                    xcol,
+                    sort=[
                     "Monday",
                     "Tuesday",
                     "Wednesday",
@@ -64,8 +78,22 @@ def plot2_altair(temperature_df_full, xcol="Day of Week", cat_compare="Room Type
     necessary_cols.append(xcol)
     necessary_cols.append(cat_compare)
     temperature_df_filtered = temperature_df_full[necessary_cols]
-
-    chart2 = (
+    if (xcol == "Date"):
+        chart2 = (
+        alt.Chart(temperature_df_filtered,title="The average of Relative Humidity of the selected rooms is plotted with the selected time range")
+        .mark_line()
+        .encode(
+            x=alt.X(
+                xcol,axis=alt.Axis(title="Datetime", grid=False, format="%b %d %I%p", labelOverlap=False, labelAngle=-45),
+            ),
+            y="mean(Relative Humidity (%))",
+            color=cat_compare,
+        )
+        .properties(height=250, width=800)
+        .interactive()
+        )
+    else:
+        chart2 = (
         alt.Chart(temperature_df_filtered,title="The average of Relative Humidity of the selected rooms is plotted with the selected time range")
         .mark_line()
         .encode(

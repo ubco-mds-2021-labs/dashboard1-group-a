@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 from data.data import temperature_df_full
 import altair as alt
 from ..app import app
-from .style import plot_style_tab1,whole_tab_style,label_style_active
+from .style import plot_style_tab1,whole_tab_style,label_style_active,label_style_init
 alt.data_transformers.disable_max_rows()
 
 
@@ -105,6 +105,7 @@ plot2 = html.Iframe(
 TAB1 = dbc.Tab(
     tab_id="tab-0",
     label="House Climate",
+    label_style = label_style_init,
     active_label_style=label_style_active,
     children=[
         plot1,

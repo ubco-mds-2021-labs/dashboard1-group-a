@@ -3,7 +3,7 @@
 
 Finding the patterns in the energy usage of a house based on weather conditions! Who would think something like weather condition would effect the consumption of energy? We did!!
 
-<img src ="assets/ezgif-1-9720e4a1fc.gif" width="500px">
+<img src ="assets/ezgif.com-gif-maker.gif" width="500px">
  
 See how the changes are so drastic? Who would have thought?
 
@@ -27,7 +27,7 @@ Disha: https://disha551.herokuapp.com/
 
 Kristy: https://kristydata551.herokuapp.com/
 
-The dashboard created based on a dataset of appliances energy use data in a low energy building. The dashboard will allow users to explore different aspects of the data, like how external factors like temperature, humidity and windspeed trend alongside energy consumption. Other factors such as time of day (morning, afternoon, evening) and day of week (weekday,weekend) and sunlight(east/west) can also be explored by users.  We would like to figure out the house climate and energy use in different time period and if there is a relation between the energy consumptions and the factors. 
+The dashboard is created based on a dataset of appliances energy use data in a low energy building. The dashboard will allow users to explore different aspects of the data, like how external factors like temperature, humidity and windspeed trend alongside energy consumption. Other factors such as time of day (morning, afternoon, evening) and day of week (weekday,weekend) and sunlight(east/west) can also be explored by users.  We would like to figure out the house climate and energy use in different time period and if there is a relation between the energy consumptions and the factors. 
 
 ## Who are the cool people involved?
 
@@ -47,11 +47,10 @@ This dashboard is primarily designed for engineers interested in creating energy
 
 ## How does our dashboard work?
 
-Our dashboard contains two separate tabs for seeing the house climate conditions and the energy usage. The first tab has three components that a user can control. The first component is used for selecting what has to be compared across. On selecting the comparison type, the user can select the sub categories within the comparison type. For example, if the user wants to compare across different room types, the user can choose room type in the first dropdown and can choose the types of rooms using the checkbox. The third component lets the user select the time scale which is full(over 5 months every day), monthly(For 5 months), days of a week and hours of the day. On selecting one of this time scale, the average humidity over the time range selected is displayed over the comparison type.  
+Our dashboard contains two separate tabs for seeing the house climate conditions and the energy usage. The first tab has three components that a user can control. The first component is used for selecting what has to be compared across. On selecting the comparison type, the user can select the sub categories within the comparison type. For example, if the user wants to compare across different room types, the user can choose room type in the first dropdown and can choose the types of rooms using the checkbox. The third component lets the user select the time scale which is full(over 5 months every day), monthly(For 5 months), days of a week and hours of the day. On selecting one of these time scale, the average humidity over the time range selected is displayed over the comparison type.  
 
-The second tab is about energy use. It also has the comparison factor dropdown box.  The second checkbox is used to choose the level of humidity. The third and the fiurth component is used to choose the timescale and date range. The resulting plot will show the energy consumed by lights and appliances in the house for varying levels of conditions specified and the time range specified. It also shows the total energy consumption separately and its relationship with the factor. Below we will include a plot which shows how the selected factor changes over time within the specified range.
-
-These are the initial sketches of our dashboard. This is what we are working towards, but recognize there will likely be some changes along the way. Stay tuned!  
+The second tab is about energy use. Firstly it has a date range picker. The user can select the required range of date to see the variation in energy usage and weather conditions. It also has the comparison factor dropdown box.   The resulting plot will show the energy consumed by lights and appliances in the house for varying levels of conditions specified and the time range specified. It also shows the total energy consumption separately and its relationship with the factor. The last plot shows how the selected factor changes over the desired range of time.
+These were the initial sketches of our dashboard. But kudos! We ade the dashboard look even better!!
 
 <img src ="assets/sketch_tab1.png" width="500px">
 <img src ="assets/sketch_tab2.png" width="500px">

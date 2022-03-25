@@ -89,3 +89,70 @@ All team members agree to the Feature Branching] workflow, and the following con
 * The `main` branch should be clean, predictable, and functional code. 
     * Pull-requests should not be approved if code harms functionality of the `main` branch.
     * Unless minimal or for a good reason, changes should not be made directly to the `main` branch.
+
+## Addendum: Final Reflection on Workload Distribution
+
+** This section should be completed AFTER Milestone 4 is done and submitted! Only one is needed PER group. **
+
+In this section we will ask you to self-report the workload distribution to various categories of tasks.
+For each of the categories, we want you to report the approximate workload distribution, split by the milestone.
+
+Here are the tables you are expected to complete (the first one is pre-filled in so you can see what we're expecting):
+
+### Milestone 1
+
+| Category           | Disha         | Gavin         | Kristy        | Yilin         |
+|--------------------|---------------|---------------|---------------|---------------|
+| Repository Setup   | -             | 100%          | -             | -             |
+| Sketch             | 25%           | 75%           | -             | -             |
+| Documentation      | 20%           | 25%           | 30%           | 25%           |
+| Project Management | 15%           | 50%           | 25%           | 10%           |
+| Troubleshooting    | -             | 100%          | -             | -             |
+
+Brief notes/explanations (optional):
+- The Bulk of the work in this milestone is contained in "Documentation".
+- Repository Setup was in preparation for Milestone 2, not milestone 1.
+- No code troubleshooting was needed for milestone 1 documentation - only some small git explanations.
+
+### Milestone 2
+
+| Category                  | Disha         | Gavin         | Kristy        | Yilin         |
+|---------------------------|---------------|---------------|---------------|---------------|
+| Documentation/Reflection  | 30%           | 70%           | -             | -             |
+| Writing new code          | 25%           | 25%           | 25%           | 25%           |
+| Code Reviews/editing      | 10%           | 30%           | 30%           | 30%           |
+| Project Management        | 20%           | 50%           | 10%           | 20%           |
+| Testing & Troubleshooting | 10%           | 35%           | 30%           | 25%           |
+
+Brief notes/explanations (optional):
+* Documentation/Reflection scores also reflect function docstrings.
+* Bulk of the work in this milestone is in Writing new code.
+* Troubleshooting includes liasing with Firas.
+
+
+### Milestone 3
+
+| Category                  | Disha         | Gavin         | Kristy        | Yilin         |
+|---------------------------|---------------|---------------|---------------|---------------|
+| Documentation/Reflection  | 70%           | -             | 30%           | -             |
+| Writing new code          | 30%           | 5%            | 20%           | 45%           |
+| Code Reviews/editing      | 10%           | -             | 10%           | 80%           |
+| Project Management        | 25%           | 10%           | 20%           | 45%           |
+| Testing & Troubleshooting | 15%           | 10%           | 50%           | 25%           |
+
+Brief notes/explanations (optional):
+- Yilin was responsible 80% of the repository setup for the R application, and Disha for 20%.
+- Gavin contributed much less in Milestone 3 after taking the lead on milestone 2.
+- "Troubleshooting" including solving personal coding problems.
+
+### Milestone 4
+
+| Category                  | Disha         | Gavin         | Kristy        | Yilin         |
+|---------------------------|---------------|---------------|---------------|---------------|
+| Documentation/Reflection  |               |               |               |               |
+| Writing new code          |               |               |               |               |
+| Code Reviews/editing      |               |               |               |               |
+| Project Management        |               |               |               |               |
+| Testing & Troubleshooting |               |               |               |               |
+
+Brief notes/explanations (optional):

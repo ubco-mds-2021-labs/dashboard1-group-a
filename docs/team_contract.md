@@ -149,10 +149,10 @@ Brief notes/explanations (optional):
 
 | Category                  | Disha         | Gavin         | Kristy        | Yilin         |
 |---------------------------|---------------|---------------|---------------|---------------|
-| Documentation/Reflection  |               |               |               |               |
-| Writing new code          |               |               |               |               |
-| Code Reviews/editing      |               |               |               |               |
-| Project Management        |               |               |               |               |
-| Testing & Troubleshooting |               |               |               |               |
+| Documentation/Reflection  | 25%           | 55%           | 10%           | 10%           |
+| Writing new code          | 30%           | 20%           | 30%           | 20%           |
+| Code Reviews/editing      | 15%           | 15%           | 15%           | 55%           |
+| Project Management        | 10%           | 70%           | 10%           | 10%           |
+| Testing & Troubleshooting | 20%           | 30%           | 30%           | 20%           |
 
 Brief notes/explanations (optional):

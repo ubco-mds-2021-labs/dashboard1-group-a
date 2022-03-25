@@ -73,7 +73,7 @@ def energy_plot(start_date="2016-01-18", end_date="2016-01-24"):
     ##second chart - layer 1
     CC = (
         alt.Chart(energy_df_filtered, title="Average Energy Usage by Hour of Day")
-        .mark_line(color="#1f77b4")
+        .mark_line(color="#5778a4")
         .encode(
             alt.X(
                 "Hour of Day",
@@ -118,14 +118,14 @@ def energy_plot(start_date="2016-01-18", end_date="2016-01-24"):
             alt.X(
                 "Date:T",
                 axis=alt.Axis(
-                    title="Elapsed Time",
+                    title="Datetime",
                     format="%b %d %I%p",
                     labelOverlap=False,
                     labelAngle=-45,
                 ),
             ),
             alt.Y("value:Q", axis=alt.Axis(title="Energy Usage in wH")),
-            color=alt.Color("total:N", legend=alt.Legend(orient="top")),
+            color=alt.Color("total:N", legend=alt.Legend(orient="top", title=None)),
         )
         .properties(height=200, width=400)
     )
@@ -156,7 +156,7 @@ def weather_plot(
             alt.X(
                 "Date:T",
                 axis=alt.Axis(
-                    title="Elapsed Time",
+                    title="Datetime",
                     format="%b %d %I%p",
                     labelOverlap=False,
                     labelAngle=-45,
